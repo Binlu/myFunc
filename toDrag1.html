@@ -43,6 +43,9 @@ window.onload=function(){
 }
 // 拖拽
 function toDragBox(eleClass){
+	// 超出边界值
+	var mx=50;
+	var my=50;
 	var a=this;
 	var aDiv=getByClass(document,eleClass);
 	for(var i=0, len=aDiv.length;i<len;i++){
@@ -72,32 +75,31 @@ function toDragBox(eleClass){
 		});
 	}
 	a.touchMove=function(ev,obj,x,y){
-
-				var oEvent=ev.targetTouches[0]||event.targetTouches[0];
-				var oX=oEvent.clientX-x;
-				var oY=oEvent.clientY-y;
-				if(oX<-100){
-					oX=-100;
-				}
-				if(oX>document.documentElement.offsetWidth-obj.offsetWidth/2){
-					oX=document.documentElement.offsetWidth-obj.offsetWidth/2;
-				}
-				if(oY<-100){
-					oY=-100;
-				}
-				if(oY>document.documentElement.clientHeight-obj.offsetHeight/2){
-					oY=document.documentElement.clientHeight-obj.offsetHeight/2;
-				}
-				obj.style.left=oX+"px";
-				obj.style.top=oY+"px";
-			};
+		var oEvent=ev.targetTouches[0]||event.targetTouches[0];
+		var oX=oEvent.clientX-x;
+		var oY=oEvent.clientY-y;
+		if(oX<-mx){
+			oX=-mx;
+		}
+		if(oX>document.documentElement.offsetWidth-obj.offsetWidth/2){
+			oX=document.documentElement.offsetWidth-obj.offsetWidth/2;
+		}
+		if(oY<-my){
+			oY=-my;
+		}
+		if(oY>document.documentElement.clientHeight-obj.offsetHeight/2){
+			oY=document.documentElement.clientHeight-obj.offsetHeight/2;
+		}
+		obj.style.left=oX+"px";
+		obj.style.top=oY+"px";
+	};
 	a.touchEnd=function(obj){
-				obj.ontouchmove=null;
-				obj.ontouchend=null;
-				if(obj.releaseCapture){
-					obj.releaseCapture();
-				}
-			};
+		obj.ontouchmove=null;
+		obj.ontouchend=null;
+		if(obj.releaseCapture){
+			obj.releaseCapture();
+		}
+	};
 }
 // 获取class
 function getByClass(oParent,sClass){
