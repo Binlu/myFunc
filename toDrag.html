@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拖拽框</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.div1{
+		position: absolute;
+		width: 50%;
+		top: 10%;
+		left: 25%;
+		background-color: #fff;
+		box-shadow: 3px 3px 5px #aaa;
+	}
+	.div2{
+		padding: 20px 10px;
+		background-color: #23f;
+		color: #fff;
+		cursor: move;
+		font-weight: bold;
+	}
+</style>
+</head>
+
+<body>
+	<div class="div1">
+		<div class="div2">
+			开始拖动
+		</div>
+		<div>让我一起走吧</div>
+		<div>那就一起走吧</div>
+		<div>肯定一起走啊</div>
+		<div>一定一起走啊</div>
+	</div>
+</body>
+<script type="text/javascript">
+window.onload=function(){
+	toDragBox("div2");
+}
+// 拖拽
+function toDragBox(eleClass){
+	var a=this;
+	var aDiv=getByClass(document,eleClass);
+	for(var i=0, len=aDiv.length;i<len;i++){	
+		aDiv[i].onmousedown=function(ev){
+			var oDiv=this.parentNode;
+			var oEvent=ev||event;
+			var x=oEvent.clientX-oDiv.offsetLeft;
+			var y=oEvent.clientY-oDiv.offsetTop;
+			if(oDiv.setCapture){
+				oDiv.onmousemove=function(ev){
+					a.mosueMove(ev,oDiv,x,y);
+				}
+				oDiv.onmouseup=function(ev){
+					a.mouseUp(oDiv);
+				}
+				oDiv.setCapture();
+			}
+			else{
+				document.onmousemove=function(ev){
+					a.mosueMove(ev,oDiv,x,y);
+				}
+				document.onmouseup=function(ev){
+					a.mouseUp(document);
+				}
+			}
+			return false;
+		}
+	}
+	a.mosueMove=function(ev,obj,x,y){
+				var oEvent=ev||event;
+				var oX=oEvent.clientX-x;
+				var oY=oEvent.clientY-y;
+				if(oX<-100){
+					oX=-100;
+				}
+				if(oX>document.documentElement.offsetWidth-obj.offsetWidth/2){
+					oX=document.documentElement.offsetWidth-obj.offsetWidth/2;
+				}
+				if(oY<-100){
+					oY=-100;
+				}
+				if(oY>document.documentElement.clientHeight-obj.offsetHeight/2){
+					oY=document.documentElement.clientHeight-obj.offsetHeight/2;
+				}
+				obj.style.left=oX+"px";
+				obj.style.top=oY+"px";
+			};
+	a.mouseUp=function(obj){
+				obj.onmousemove=null;
+				obj.onmouseup=null;
+				if(obj.releaseCapture){
+					obj.releaseCapture();
+				}
+			};
+}
+// 获取class
+function getByClass(oParent,sClass){
+	var aEle=oParent.getElementsByTagName("*");
+	var aResult=[];
+	for(var i=0,tt=aEle.length;i<tt;i++){
+		if(aEle[i].className.indexOf(sClass)>=0){
+			var arr_class=aEle[i].className.split(" ");
+			for(var j=0,len=arr_class.length;j<len;j++){
+				if(arr_class[j]==sClass){
+					aResult.push(aEle[i]);
+				}
+			}
+		}
+	}
+	return aResult;
+}
+</script>
+</html>
+
+
+
