@@ -36,99 +36,99 @@
 		<div>肯定一起走啊</div>
 		<div>一定一起走啊</div>
 	</div>
-</body>
-<script type="text/javascript">
-window.onload=function(){
-	toDragBox("div2");
-}
-// 拖拽
-function toDragBox(eleClass){
-	// 超出边界值
-	var mx=50;
-	var my=50;
-	var a=this;
-	var aDiv=getByClass(document,eleClass);
-	for(var i=0, len=aDiv.length;i<len;i++){
-		addEvent(aDiv[i],"touchstart",function(ev){
-			var oDiv=this.parentNode;
-			var oEvent=ev.targetTouches[0]||event.targetTouches[0];
-			var x=oEvent.clientX-oDiv.offsetLeft;
-			var y=oEvent.clientY-oDiv.offsetTop;
-			if(oDiv.setCapture){
-				addEvent(oDiv,"touchmove",function(ev){
-					a.touchMove(ev,oDiv,x,y);
+	<script type="text/javascript">
+		window.onload=function(){
+			toDragBox("div2");
+		}
+		// 拖拽
+		function toDragBox(eleClass){
+			// 超出边界值
+			var mx=50;
+			var my=50;
+			var a=this;
+			var aDiv=getByClass(document,eleClass);
+			for(var i=0, len=aDiv.length;i<len;i++){
+				addEvent(aDiv[i],"touchstart",function(ev){
+					var oDiv=this.parentNode;
+					var oEvent=ev.targetTouches[0]||event.targetTouches[0];
+					var x=oEvent.clientX-oDiv.offsetLeft;
+					var y=oEvent.clientY-oDiv.offsetTop;
+					if(oDiv.setCapture){
+						addEvent(oDiv,"touchmove",function(ev){
+							a.touchMove(ev,oDiv,x,y);
+						});
+						addEvent(oDiv,"touchend",function(){
+							a.touchEnd(oDiv);
+						});
+						oDiv.setCapture();
+					}
+					else{
+						addEvent(oDiv,"touchmove",function(ev){
+							a.touchMove(ev,oDiv,x,y);
+						});
+						addEvent(oDiv,"touchend",function(){
+							a.touchEnd(oDiv);
+						});
+					}
+					return false;
 				});
-				addEvent(oDiv,"touchend",function(){
-					a.touchEnd(oDiv);
-				});
-				oDiv.setCapture();
 			}
-			else{
-				addEvent(oDiv,"touchmove",function(ev){
-					a.touchMove(ev,oDiv,x,y);
-				});
-				addEvent(oDiv,"touchend",function(){
-					a.touchEnd(oDiv);
-				});
-			}
-			return false;
-		});
-	}
-	a.touchMove=function(ev,obj,x,y){
-		var oEvent=ev.targetTouches[0]||event.targetTouches[0];
-		var oX=oEvent.clientX-x;
-		var oY=oEvent.clientY-y;
-		if(oX<-mx){
-			oX=-mx;
+			a.touchMove=function(ev,obj,x,y){
+				var oEvent=ev.targetTouches[0]||event.targetTouches[0];
+				var oX=oEvent.clientX-x;
+				var oY=oEvent.clientY-y;
+				if(oX<-mx){
+					oX=-mx;
+				}
+				if(oX>document.documentElement.offsetWidth-obj.offsetWidth/2){
+					oX=document.documentElement.offsetWidth-obj.offsetWidth/2;
+				}
+				if(oY<-my){
+					oY=-my;
+				}
+				if(oY>document.documentElement.clientHeight-obj.offsetHeight/2){
+					oY=document.documentElement.clientHeight-obj.offsetHeight/2;
+				}
+				obj.style.left=oX+"px";
+				obj.style.top=oY+"px";
+			};
+			a.touchEnd=function(obj){
+				obj.ontouchmove=null;
+				obj.ontouchend=null;
+				if(obj.releaseCapture){
+					obj.releaseCapture();
+				}
+			};
 		}
-		if(oX>document.documentElement.offsetWidth-obj.offsetWidth/2){
-			oX=document.documentElement.offsetWidth-obj.offsetWidth/2;
-		}
-		if(oY<-my){
-			oY=-my;
-		}
-		if(oY>document.documentElement.clientHeight-obj.offsetHeight/2){
-			oY=document.documentElement.clientHeight-obj.offsetHeight/2;
-		}
-		obj.style.left=oX+"px";
-		obj.style.top=oY+"px";
-	};
-	a.touchEnd=function(obj){
-		obj.ontouchmove=null;
-		obj.ontouchend=null;
-		if(obj.releaseCapture){
-			obj.releaseCapture();
-		}
-	};
-}
-// 获取class
-function getByClass(oParent,sClass){
-	var aEle=oParent.getElementsByTagName("*");
-	var aResult=[];
-	for(var i=0,tt=aEle.length;i<tt;i++){
-		if(aEle[i].className.indexOf(sClass)>=0){
-			var arr_class=aEle[i].className.split(" ");
-			for(var j=0,len=arr_class.length;j<len;j++){
-				if(arr_class[j]==sClass){
-					aResult.push(aEle[i]);
+		// 获取class
+		function getByClass(oParent,sClass){
+			var aEle=oParent.getElementsByTagName("*");
+			var aResult=[];
+			for(var i=0,tt=aEle.length;i<tt;i++){
+				if(aEle[i].className.indexOf(sClass)>=0){
+					var arr_class=aEle[i].className.split(" ");
+					for(var j=0,len=arr_class.length;j<len;j++){
+						if(arr_class[j]==sClass){
+							aResult.push(aEle[i]);
+						}
+					}
 				}
 			}
+			return aResult;
 		}
-	}
-	return aResult;
-}
-// 事件绑定
-function addEvent(oTarget,sEventType,func){
-	// oTarget==目标对象，sEventType==事件,func==绑定的函数
-	if(oTarget.addEventListener){
-		oTarget.addEventListener(sEventType,func,false);
-	}
-	else{
-		// ie
-		oTarget.attachEvent("on"+sEventType,func);
-	}
-}
-</script>
+		// 事件绑定
+		function addEvent(oTarget,sEventType,func){
+			// oTarget==目标对象，sEventType==事件,func==绑定的函数
+			if(oTarget.addEventListener){
+				oTarget.addEventListener(sEventType,func,false);
+			}
+			else{
+				// ie
+				oTarget.attachEvent("on"+sEventType,func);
+			}
+		}
+	</script>
+</body>
 </html>
 
 

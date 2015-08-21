@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>城市拼音搜索</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.btn1,.btn1:visited,.btn1:hover,.btn1:active{
+		color: #0A67F7;
+		text-decoration: none;
+	}
+</style>
+<script src="js/jquery-2.1.4.min.js" ></script>
+<script src="js/pinYin.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=5ZmIO6bXbDtdllzdMZwfXmFm"></script>
+</head>
+
+<body>
+	<span class="pos_city_spn"></span>
+	<input class="js_city" type="text">
+	<ul class="city_list">
+
+	</ul>
+	<script type="text/javascript">
+	$(function(){
+		// 城市
+		var arr=["北京","上海","天津","广东","深圳","常州","无锡","昆山","南京","兰州","西安","郑州","合肥","乌鲁木齐","拉萨","天水","定西","常熟","大理","苏州","兰芝"];
+		// 定位
+		var geolocation=new BMap.Geolocation();
+		geolocation.getCurrentPosition(function(r){
+			if(this.getStatus()==BMAP_STATUS_SUCCESS){
+				var mk=new BMap.Marker(r.point);
+				var theurl="http://api.map.baidu.com/geocoder/v2/?ak=5ZmIO6bXbDtdllzdMZwfXmFm&location="+r.point.lat+","+r.point.lng+"&output=json&pois=0";
+				 $.ajax({type:"POST",url:theurl,dataType:'jsonp',
+					success: function(response){  
+						var res=response.result;
+						var ac=res.addressComponent;
+						$(".pos_city_spn").text(pcformat(ac.city));
+					},
+					error:function(){
+						$(".pos_city_spn").text("很抱歉，获取不到您当前的位置！");
+					}
+				}); 
+			}     
+		},{enableHighAccuracy:true});
+		// 驻地搜索
+		$(".js_city").bind("input propertychange",function(){
+			var txt=$(this).val();
+			if(txt=="" || txt==null){
+				$(".city_list").html("");
+			}else{
+				toMatch(arr,txt,$(".city_list"));
+			}
+		});
+	});
+//格式化省市自治区
+function pcformat(txt){
+	return txt.replace("省","").replace("市","").replace("维吾尔族自治区","").replace("特别行政区","").replace("自治区","");
+}
+// 搜索城市
+function toMatch(arr,txt,oEle){
+                var _html1="";
+                var _html2="";
+                var _html3="";
+                var _html4="";
+                var a={"jp":"","qp":"","hp":""};
+                var b={"jp":"","qp":"","hp":""};
+                // 获取简拼
+                b.fw=Pinyin.GetQP(txt)[0];
+                b.jp=Pinyin.GetJP(txt);
+                // 全拼
+                b.qp=Pinyin.GetQP(txt);
+                // 混拼
+                b.hp=Pinyin.GetHP(txt);
+                for(var i=0,len=arr.length;i<len;i++){
+                	a.fw=Pinyin.GetQP(arr[i])[0];
+                    a.jp=Pinyin.GetJP(arr[i]);
+                    a.qp=Pinyin.GetQP(arr[i]);
+                    a.hp=Pinyin.GetHP(arr[i]);
+                    if(a.fw==b.fw){
+                    	// 首字母匹配
+                    	if(a.qp==b.qp){
+	                        // 匹配
+	                        _html1+='<li><a class="btn1 js_btn2" href="javascript:;"><span class="pos_name">'+arr[i]+'</span></a></li>';
+	                        oEle.html("");
+	                        oEle.html(_html1);
+	                        $(".city_li").show();
+	                    }else if(a.jp==b.jp){
+	                        _html2+='<li><a class="btn1 js_btn2" href="javascript:;"><span class="pos_name">'+arr[i]+'</span></a></li>';
+	                        oEle.html(_html2);
+	                        $(".city_li").show();
+	                    }
+	                    else if(a.hp==b.hp){
+	                        _html3+='<li><a class="btn1 js_btn2" href="javascript:;"><span class="pos_name">'+arr[i]+'</span></a></li>';
+	                        oEle.html(_html3);
+	                        $(".city_li").show();
+	                    }else{
+	                    	_html4+='<li><a class="btn1 js_btn2" href="javascript:;"><span class="pos_name">'+arr[i]+'</span></a></li>';
+	                        oEle.html(_html4);
+	                        $(".city_li").show();
+	                    }
+                    }
+                    
+                }
+                if($(".city_list>li").length<1){
+					$(".attention_txt1").text("很抱歉，暂不支持您检索的地区！").show();
+				}else{
+					$(".attention_txt1").text("").hide();
+				}
+            }
+
+	</script>
+</body>
+</html>
+
+
+
