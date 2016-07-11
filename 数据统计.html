@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>弹出框</title>
+		<meta charset="utf-8"/>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			html,body{
+				height: 100%;
+			}
+			a{text-decoration: none;}
+			li{list-style-type: decimal;}
+			.box{
+				height: 100%;
+				zoom:1\9;
+			}
+			.box:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.left{
+				float:left;
+				width: 200px;
+				min-height: 100%;
+				color: #fff;
+				background-color: #171619;
+			}
+			.content{
+				padding-left: 200px;
+				*padding-left: 0;
+				min-height: 100%;
+				background-color: #E2C7C2;
+			}
+			.section{
+				padding: 20px;
+			}
+			.section>h2{
+				font-size: 16px;
+			}
+			.left>h2{
+				padding-top: 20px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			.forms>label{
+				display: inline-block;
+				width: 80px;
+				margin-right: 10px;
+				text-align: right;
+			}
+			.forms>input[type="text"]{
+				font-size: 1em;
+				padding: 2px 5px;
+				margin: 10px 0;
+			}
+			.forms>input[type="button"],.forms>input[type="reset"]{
+				font-size: 1em;
+				padding: 2px 5px;
+				margin: 10px 0;
+			}
+			.op-div>label{
+				margin-right: 10px;
+			}
+			.op-div>input[type="text"]{
+				font-size: 1em;
+				padding: 2px 5px;
+				margin: 10px 0;
+			}
+			.op-div>input[type="button"]{
+				font-size: 1em;
+				padding: 2px 5px;
+				margin: 10px 0;
+			}
+			.charts{
+				width: 800px;
+				height: 480px;
+				margin: 20px auto;
+				border: 1px solid #111;
+				background-color: #000;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/echarts.common.min.js"></script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<h2>数据统计</h2>
+			</div>
+			<div class="content">
+				<div class="section">
+					<h2>收支情况</h2>
+					<form class="forms js-forms1" name="form1">
+						<label for="total">总收入:</label><input type="text" name="total" value=""/>
+						<label for="cost">计算支出:</label><input type="text" name="cost"/><br/>
+						<label for="surplus">剩余:</label><input type="text" name="surplus"/>
+						<label for="month">月份:</label><input type="text" name="month"/><br/>
+						<label for="date">日期:</label><input type="text" name="date"/>
+						<label></label><input class="js-btn1" type="button" value="save">
+						<input type="reset" value="reset"><br/>
+					</form>
+					<div class="op-div"><label>删除第N条数据:</label><input type="text" placeholder="输入要删除的数据"/>
+						<input class="js-del-date1" type="button" value="删除">
+					</div>
+					<div class="charts js-total">
+					</div>
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<script type="text/javascript">
+			var mainChart=null,detailChart=null,nDate=null;
+			$(function(){
+				
+				nDate=new Date();
+				mainChart=echarts.init(document.querySelector('.js-total'));
+				//读取设置数据
+				(function(){
+					if(!localStorage.getItem("user")){
+						localStorage.setItem("user",JSON.stringify({
+							hasData: false,
+							data:{
+								main:{}
+							}
+						}));
+					}else{
+						
+						console.log("ok");
+						var local=JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):{},option=null;
+						if(local["hasData"]!="undefined" && local["hasData"]==true){
+							option=local["data"]["main"];
+							mainChart.setOption(option);
+						}else{
+							console.log("no data");
+						}
+					}
+				})();
+				// 绑定事件
+				$(".js-btn1").on("click",function(){
+					var arr=$(this).parent().serializeArray();
+					var aTxt=["总收入","计算支出","剩余","月份","日期"];
+					var canSub=true;
+					for(var i=0,len=arr.length;i<len;i++){
+						if(arr[i]["value"]==""){
+							alert("请输入"+aTxt[i]);
+							canSub=false;
+							break;
+						}else if(!/^\d+(\.\d{1,}$)?/g.test(arr[i]["value"])){
+							canSub=false;
+							alert(aTxt[i]+"必须为数字");
+							break;
+						}
+					}
+					if(canSub){
+						// 数据ok
+						var local=JSON.parse(localStorage.getItem("user")),option=null;
+						if(!local["hasData"]){
+							var lArr=[],sArr=[];
+							for(var j=0;j<len;j++){
+								if(j<3){
+									lArr.push({
+										name:aTxt[j],
+										icon:"circle",
+										textStyle:{
+											color:"red"
+										},
+									});
+									sArr.push({
+										name:aTxt[j],
+										type:"line",
+										data:[Number(arr[j]["value"]).toFixed(2)]
+									})
+								}
+								
+							}
+							option={
+								title:{
+									text:"收支统计"
+								},
+								tooltip:{
+									trigger:"axis",
+								},
+								legend:{
+									data:lArr,
+								},
+								xAxis: {
+					                data: [nDate.getFullYear()+"-"+arr[3]["value"]+"-"+arr[4]["value"]],	//x轴数据
+					                boundaryGap:false,		//x轴数据位置
+					            },
+					            yAxis: {},
+					            series: sArr
+							}
+						}else{
+							option=local["data"]["main"];
+							option.xAxis["data"].push(nDate.getFullYear()+"-"+arr[3]["value"]+"-"+arr[4]["value"]);
+							for(var j=0;j<len;j++){
+								if(j<3){
+									option.series[j]["data"].push(Number(arr[j]["value"]).toFixed(2));
+								}
+							}
+						}
+						mainChart.setOption(option);
+						localStorage.setItem("user",JSON.stringify({
+							hasData:true,
+							data:{
+								main:option
+							}
+						}));
+					}
+					
+				});
+			});
+			// 删除数据
+			$(".js-del-date1").on("click",function(){
+				var num=$(this).siblings("input").val()?$(this).siblings("input").val():"";
+				if(num!="" && parseInt(num)!=NaN && num>0){
+					delDate(num-1);
+				}
+				
+			});
+			function clearFunc(){
+				localStorage.clear();
+			}
+			function resetStorage(option){
+				var local=JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):{};
+				if(!local.hasData=="undefined"){
+					setItem("user",JSON.stringify({
+						hasData:true,
+						data:{
+							main:option
+						}
+					}))
+				}
+			}
+			function delDate(index){
+				var local=JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):{};
+				if(local.hasData!="undefined" && local.hasData==true){
+					var option=local["data"]["main"];
+					var len=option.series.length;
+					if(len>0){
+						if(index<len){
+							option.xAxis["data"].splice(index,1);
+							for(var i=0;i<len;i++){
+								option.series[i]["data"].splice(index,1);
+							}
+							mainChart.setOption(option);
+							localStorage.setItem("user",JSON.stringify({
+								hasData:true,
+								data:{
+									main:option
+								}
+							}));
+						}
+					}else{
+						localStorage.setItem("user",JSON.stringify({
+							hasData:true,
+							data:{
+								main:{}
+							}
+						}));
+					}
+					
+				}
+				
+			}
+		</script>
+	</body>
+</html>
