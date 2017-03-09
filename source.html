@@ -22,14 +22,25 @@
             .add-btn{z-index: 10;position: absolute;right: 0;top: 0;height: 100%;font-size: 1.2rem;padding: 0 1rem;display: inline-block;color: #fff;}
             header>h1{font-size: 1.5rem}
             .content{padding: 5rem 0 7rem;}
+            .content>h3{font-size: 1.2rem;text-align: center;}
+            .content>p{font-size: 1.2rem;margin-top: 2rem;text-align: center;display: none;}
             .search-section{z-index: 20;position: fixed;left: 0;bottom: 3rem;width: 100%;padding: 1rem 0;text-align: center;}
             .search-area{font-size: 1rem;padding: 0.5em;border:none;border-bottom: 2px solid transparent;-webkit-transition:all 0.5s;}
             .search-area:focus{border-bottom: 2px solid #ef7446}
             .search-btn{font-size: 1.2rem;padding: 0.3em 1.5em;margin-left: 0.5rem;background-color: #ef7446;color: #fff;border-radius: 0.2em;-webkit-transition:all 0.2s;}
             .search-btn:active{background: #f10000;}
-            .list{font-size: 1.4rem;padding-left: 2rem}
+            .list{font-size: 1.4rem;padding-left: 2rem;margin-top: 2rem;}
             .list>li{padding: 0.5rem}
             footer{z-index: 10;position: fixed;bottom: 0;left: 0;width: 100%;height: 3rem;line-height: 3rem;text-align: center;background-color: #000;color: #aaa}
+
+            .add-page{z-index: 500;position: fixed;left: 100%;top: 0;width: 100%;height: 100%;background-color: #000;color: #fff;-webkit-transition: all 0.4s ease}
+            .header{height: 4rem;line-height: 4rem;font-size: 1.5rem;text-align: center;}
+            .form-div{font-size: 1.4rem;text-align: center;}
+            .form-div>input{font-size: 1.2rem;width: 40%;margin-top: 2rem;padding:0.2em 0.5em;text-align: left;}
+            .form-div>button{font-size: 1.2rem;margin-top: 3rem;margin-right: 1em;padding:0.3em 1.5em;border-radius: 0.2em;color: #F7F21A;background-color: #0A2154}
+            .form-div>button.del-btn{width: 40%;background-color: #635B5B;color: #fff;}
+            .form-div>h3{margin-top: 2rem;}
+            .move1{;left: 0}
         </style>
         <!-- javascript -->
     </head>
@@ -37,31 +48,14 @@
         <div class="view">
             <header>
                 <h1>数据库</h1>
-                <button class="add-btn">新增</button>
+                <button class="add-btn js-operation-btn">操作</button>
             </header>
             <section class="content">
+                <h3>查询结果</h3>
                 <ol class="list js-list">
-                    <li>1.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>1.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>2.<label>1548548548</label>：<span>1542</span></li>
-                    <li>5.<label>1548548548</label>：<span>1542</span></li>
+                    
                 </ol>
+                <p class="js-p">没有查询到！</p>
             </section>
             <section class="search-section">
                 <input class="search-area js-input" placeholder="请输入号码">
@@ -70,6 +64,22 @@
             <footer>
                 lut000版权所有
             </footer>
+        </div>
+        <div class="add-page js-page">
+            <div class="header">
+                新增数据
+            </div>
+            <div class="form-div">
+                <label>请输入账号：</label><input type="text" placeholder="请输入账号"><br/>
+                <label>请输入密码：</label><input type="password" placeholder="请输入密码"><br/>
+                <button class="js-set-btn">添加</button>
+                <button class="js-close-btn">取消</button>
+
+                <h3>删除数据</h3>
+                <label>请输入序号：</label><input type="text" placeholder="要删除的序号"><br/>
+                <button class="del-btn js-del-btn">删除</button><br/>
+                <button class="del-btn js-del-all">全部删除</button>
+            </div>
         </div>
         <!-- script -->
         <script type="text/javascript">
@@ -121,17 +131,18 @@
             };
 
             window.onload=function(){
-                var arr=sp.getSto("data_source") || [
-
-                    {
-                        number:1854848,
-                        pass:1545
-                    }
-                ];
+                var source_arr=sp.getSto("data_source") || [];
                 
                 var def={
                     tag:sp.getEle(".js-list"),
+                    no_list:sp.getEle(".js-p"),
                     area_ele:sp.getEle(".js-input"),
+                    operation_ele:sp.getEle(".js-operation-btn"),
+                    set_ele:sp.getEle(".js-set-btn"),
+                    cancel_ele:sp.getEle(".js-close-btn"),
+                    page_ele:sp.getEle(".js-page"),
+                    del_ele:sp.getEle(".js-del-btn"),
+                    del_all_ele:sp.getEle(".js-del-btn"),
                     data:[],
                     fn:{
                         getArr:function(arr,val){
@@ -139,38 +150,118 @@
                             if(len>0){
                                 var re=new RegExp("^"+val+"","i");
                                 var num="",pass="";
+                                
                                 for(var i=0;i<len;i++){
                                     num=arr[i]["number"];
                                     pass=arr[i]["pass"];
-                                    if(re.test()){
+                                    if(re.test(num)==true){
+
                                         re_arr.push({
                                             number:num,
                                             pass:pass
                                         })
                                     }
                                 }
-                                return re_arr;
                             }
+                            return re_arr
                         },
                         setDom:function(arr){
-                            
+                            var a=def;
+                            if(arr && arr.length>0){
+                                var tag=a.tag,_html='';
+                                for(var i=0,len=arr.length;i<len;i++){
+                                    var num=arr[i]["number"];
+                                    var pass=arr[i]["pass"];
+                                    _html+='<li>';
+                                    _html+=(i+1)+".";
+                                    _html+='<label>'+num+'</label>';
+                                    _html+='：<span>'+pass+'</span>';
+                                    _html+='</li>';
+                                }
+                                tag.innerHTML=_html;
+                                a.fn.successFunc();
+                            }else{
+                                a.fn.noSearch();
+                            }
+                        },
+                        noSearch:function(){
+                            var a=def;
+                            a.tag.style.display="none";
+                            a.no_list.style.display="block";
+                        },
+                        successFunc:function(){
+                            var a=def;
+                            a.tag.style.display="block";
+                            a.no_list.style.display="none";
                         }
                     }
                 };
-                // var len=
-                console.log(def)
+                def.inp_area=sp.getEle("input",def.page_ele,1);
 
                 // 事件绑定
                 def.area_ele.oninput=def.area_ele.onpropertychange=function(){
                     var val=this.value;
                     val=val.replace(/\s/g,"");
                     if(val==""){
+                        def.fn.noSearch();
                         return;
                     }
-                    var narr=def.fn.getArr(arr,val);
+                    var narr=def.fn.getArr(source_arr,val);
                     def.fn.setDom(narr);
                 }
 
+                // 打开新增
+                def.operation_ele.onclick=function(){
+                    def.page_ele.className="add-page js-page move1";
+                }
+
+                // 关闭新增
+                def.cancel_ele.onclick=function(){
+                    def.page_ele.className="add-page js-page";
+                }
+
+                // 新增
+                def.set_ele.onclick=function(){
+                    var account=def.inp_area[0].value;
+                    var pass=def.inp_area[1].value;
+                    if(account!="" && pass!=""){
+                        source_arr.push({
+                            "number":account,
+                            "pass":pass
+                        });
+                        sp.setSto("data_source",source_arr);
+                        def.page_ele.className="add-page js-page";
+                    }else{
+                        alert("请输入内容");
+                    }
+                }
+                // 删除单个
+                def.del_ele.onclick=function(){
+                    var _index=def.inp_area[2].value;
+                    if(typeof (_index*1) =="number"){
+                        if(confirm("确定要删除吗?")){
+                            try{
+                                source_arr.splice(_index-1,1);
+                                ap.setSto("data_source",source_arr);
+                            }catch(err){
+                                console.log(err);
+                            }
+                        }
+                    }else{
+                        alert("请输入大于零的整数");
+                    }
+                }
+                // 删除全部
+                def.del_all_ele.onclick=function(){
+                    if(confirm("确定要删除所有数据吗?")){
+                        try{
+                            source_arr=[];
+                            sp.delSto("data_source");
+                        }catch(err){
+                            console.log(err);
+                        }
+                    }
+                }
             };
         </script>
     </body>
