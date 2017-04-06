@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>强大的localStorage</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="lut">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style type="text/css">
+            *{margin: 0;padding: 0;}
+            html,body{
+                height: 100%;
+            };
+
+            .box{
+                height: 100%;
+                zoom:1\9;
+            }
+            .box:after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .left{
+                float:left;
+                width: 200px;
+                min-height: 100%;
+                background-color: #A7A26E;
+            }
+            .content{
+                min-height: 100%;
+                padding-left: 200px;
+            }
+            .content input[type="text"]{font-size: 14px;padding: 0.3em;width: 200px;}
+            .content input[type="reset"]{font-size: 14px;padding: 0.32em 1em;}
+            .content button{font-size: 14px;padding: 0.2em 1em;}
+            .search-div{padding: 30px;}
+            .search-div>h3{font-size: 16px;margin: 20px 0;}
+            .search-div>table{width: 100%;border-collapse: collapse;}
+            .search-div>table td{padding: 5px;border:1px solid #edc;}
+            .search-div>table thead td{padding: 15px 5px;text-align: center;}
+            .search-div .C{background-color: #d0d0d0}
+            .search-div .B{background-color: #69ce68}
+            .search-div .A{background-color: #df0}
+            .synthesis-div{padding: 30px;}
+            .synthesis-div>form>label{display: inline-block;width: 80px;}
+            .synthesis-div>form>input{margin-bottom: 20px;margin-right: 30px;}
+            .del-box>label{display: inline-block;width: 80px;}
+            .del-box>input{margin-bottom: 20px;margin-right: 30px;}
+            .find-div{margin-top: 20px;}
+            .find-div>ul{margin-top: 20px;list-style-type: decimal-leading-zero}
+            .find-div>ul>li{padding: 10px;border-bottom: 1px solid #ecdfde}
+            .find-div>ul>li>span{color: #e23623}
+            .find-div>ul>li>label{color: #3f5}
+            .nav>li{
+                position: relative;
+                width: 60px;
+                padding: 5px 10px;
+                margin: 10px;
+                text-align: center;
+                background-color: #fff;
+                transition: all ease 0.5s;
+                backface-visibility:hidden;
+            }
+            .nav>li>span{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                line-height: 30px;
+                transform: rotateX(180deg);
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="box" class="box">
+            <div class="left">
+                <ul class="nav">
+                    <li>首页
+                        <span>首页</span>
+                    </li>
+                    <li>文化</li>
+                    <li>娱乐</li>
+                    <li>学习</li>
+                    <li>体育</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="search-div">
+                    <label>查询：</label><input class="js-search-player" type="text" placeholder="请输入球员名称"/>
+                    <h3>查询结果</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>名称</td>
+                                <td>球队</td>
+                                <td>关卡</td>
+                                <td>获得日期</td>
+                                <td>版本号</td>
+                            </tr>
+                        </thead>
+                        <tbody class="js-player-list">
+                            <tr>
+                                <td>詹姆斯</td>
+                                <td>骑士</td>
+                                <td>常规赛</td>
+                                <td>1,3,5</td>
+                                <td>v3.2.29</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="synthesis-div">
+                    <form class="js-synthesis-form">
+                        <label>A球员1</label><input type="text" placeholder="请输入名称"/>
+                        <label>A球员2</label><input type="text" placeholder="请输入名称"/><br>
+                        <label>B球员1</label><input type="text" placeholder="请输入名称"/>
+                        <label>B球员2</label><input type="text" placeholder="请输入名称"/><br>
+                        <label>S球员</label><input type="text" placeholder="请输入名称"/><br>
+                        <label>日期</label><input type="text" placeholder="请输入完整时间"/><br/>
+                        <label>操作</label><button class="js-add-btn">合成</button>
+                        <input type="reset" value="reset"/>
+                        
+                    </form>
+                    <div class="del-box">
+                        <label>序号</label><input class="js-del-index" type="text" placeholder="请输入要删除的数据编号"/><br/>
+                        <label></label><button class="js-del-btn">删除合成数据</button>
+                        <button class="js-del-all-btn">删除所以合成数据</button><br/><br/>
+                        <label></label><button class="js-save-btn">保存现有数据</button>
+                    </div>
+                    <div class="find-div">
+                        <label>查询：</label><input class="js-search-add" type="text" placeholder="请输入球员名称"/>
+                        <ul class="js-add-list">
+                            <li>A霍福德+A托马斯+B那就+B的尽可能+A任意==S詹姆斯  2017/03/27</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="src/js/lib/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="src/js/common/sharp-1.2.development.js"></script>
+        <script type="text/javascript" src="src/js/common/pop-msg-1.0.js"></script>
+        <script type="text/javascript" src="src/js/mengka/mengka-data.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                var def={
+                    data:origin_json,
+                    s_player_btn:sp.getEle(".js-search-player")[0],
+                    r_player_ele:sp.getEle(".js-player-list")[0],
+                    form_ele:sp.getEle(".js-synthesis-form")[0],
+                    add_btn:sp.getEle(".js-add-btn")[0],
+                    search_add_ele:sp.getEle(".js-search-add")[0],
+                    add_list:sp.getEle(".js-add-list")[0],
+                    del_ele:sp.getEle(".js-del-index")[0],
+                    del_btn:sp.getEle(".js-del-btn")[0],
+                    del_all:sp.getEle(".js-del-all-btn")[0],
+                    save_btn:sp.getEle(".js-save-btn")[0]
+                };
+                if(1>2){
+                    sp.setSto("mengka",def["data"]["add_arr"]);
+                    console.log("已经更新数据");
+                };
+                var ndate=new Date();
+                var y=ndate.getFullYear(),m=ndate.getMonth()+1,d=ndate.getDate();
+                sp.getEle("input[type=text]",def.form_ele)[5].value=y+"/"+sp.toEven(m)+"/"+sp.toEven(d);
+                def.s_player_btn.oninput=def.s_player_btn.onpropertychange=function(){      //查询副本获得球员
+                    var txt=this.value;
+                    searchPlayer(txt);
+                };
+                def.add_btn.onclick=function(){      //添加合成数据
+                    var area=sp.getEle("input[type=text]",def.form_ele);
+                    var input_area=[];
+                    for(var i=0,len=area.length;i<len;i++){
+                        input_area.push(area[i].value);
+                    };
+                    if(input_area[0]==""){
+                        pop.msg({"txt":"请输入球员A1名称"},800);
+                    }else if(input_area[1]==""){
+                        pop.msg({"txt":"请输入球员A2名称"},800);
+                    }else if(input_area[2]==""){
+                        pop.msg({"txt":"请输入球员B1名称"},800);
+                    }else if(input_area[3]==""){
+                        pop.msg({"txt":"请输入球员B2名称"},800);
+                    }else if(input_area[4]==""){
+                        pop.msg({"txt":"请输入合成球员S"},800);
+                    }else{
+                        var local_arr=sp.getSto("mengka") || [];
+                        local_arr.push(input_area);
+                        sp.setSto("mengka",local_arr);
+                        pop.msg({"txt":"添加成功！"},800);
+                    }
+                    return false;
+                };
+                def.del_btn.onclick=function(){      //删除单条数据
+                    var local_arr=sp.getSto("mengka") || [];
+                    var index=parseInt(def.del_ele.value);
+                    if(index<1 || isNaN(index)){
+                        pop.msg({"txt":"请输入要删除的数据编号"},800);
+                    }else{
+                        if(local_arr.length>0){
+                            local_arr.splice(index-1,1);
+                            sp.setSto("mengka",local_arr);
+                            pop.msg({"txt":"删除成功！"},800);
+                        }else{
+                            pop.msg({"txt":"数据已经删除！"},800);
+                        }
+                    }
+                };
+                def.del_all.onclick=function(){      //删除所有数据
+                    return;
+                    var local_arr=sp.getSto("mengka");
+                    if(local_arr){
+                        sp.delSto("mengka");
+                        pop.msg({"txt":"删除成功！"},800);
+                    }else{
+                        pop.msg({"txt":"数据已经删除！"},800);
+                    }
+                };
+                def.save_btn.onclick=function(){      //保存现有数据
+                    var local_arr=sp.getSto("mengka");
+                    if(local_arr && local_arr.length>0){
+                        document.write(JSON.stringify(local_arr));
+                    }else{
+                        pop.msg({"txt":"数据为空！"},800);
+                    }
+                };
+                def.search_add_ele.oninput=def.search_add_ele.onpropertychange=function(){      //查询合成球员
+                    var txt=this.value;
+                    searchMethod(txt);
+                };
+                function searchMethod(txt){         //查找合成
+                    var local_arr=sp.getSto("mengka"),len=local_arr.length,result_arr=[];
+                    var str="";
+                    if(len>0){
+                        for(var i=0;i<len;i++){
+                            str=local_arr[i].join(",");
+                            if(str.indexOf(txt)!=-1){
+                                result_arr.push(local_arr[i]);
+                            }
+                        }
+                        setMethodDom(result_arr);
+                    }
+                };
+                function setMethodDom(arr){         //生成dom
+                    var _html="",tar=def.add_list;
+                    for(var i=0,len=arr.length;i<len;i++){
+                        var _name=arr[i]["name"];
+                        var _position=arr[i]["position"];
+                        var _date=arr[i]["date"];
+                        var _team=arr[i]["team"];
+                        _html+='<li>';
+                        for(var j=0,len2=arr[i].length;j<len2;j++){
+                            
+                            if(j==3){
+                                _html+='<span>'+arr[i][j]+'</span>'+"+<label>A任意</label>==";
+                            }else if(j==4){
+                                _html+='<span>'+arr[i][j]+'</span>'+"\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;\&nbsp;";
+                            }else if(j==5){
+                                _html+='<span>'+arr[i][j]+'</span>';
+                            }else{
+                                _html+='<span>'+arr[i][j]+'</span>'+"+";
+                            }
+                            
+                            
+                        }
+                        _html+='</li>';
+                    };
+                    if(_html==""){
+                        _html='<li>没有数据</li>'
+                    }
+                    tar.innerHTML=_html;
+                    
+                };
+                function searchPlayer(txt){         //查找球队
+                    var json=def["data"]["data"],result_arr=[];
+                    var re=new RegExp("^"+txt),arr=[];
+                    for(key in json){
+                        arr=json[key];
+                        for(var i=0,len=arr.length;i<len;i++){
+                            if(re.test(arr[i]["name"])){
+                                console.log(key.toUpperCase())
+                                arr[i]["type"]=key;
+                                result_arr.push(arr[i]);
+                            }
+                        }
+                    }
+                    setPlayerDom(result_arr);
+                };
+
+                function setPlayerDom(arr){         //生成dom
+                    var _html="",tar=def.r_player_ele,version=def["data"]["version"];
+                    for(var i=0,len=arr.length;i<len;i++){
+                        var _name=arr[i]["name"];
+                        var _position=arr[i]["position"];
+                        var _date=arr[i]["date"];
+                        var _team=arr[i]["team"];
+                        var _type=arr[i]["type"];
+                        var _level=arr[i]["level"];
+                        var txt="";
+                        switch(_type){
+                            case "b":
+                                txt="表演赛";
+                                break;
+                            case "x":
+                                txt="新秀赛";
+                                break;
+                            case "jq":
+                                txt="季前赛";
+                                break;
+                            case "cg":
+                                txt="常规赛";
+                                break;
+                            case "jh":
+                                txt="季后赛";
+                                break;
+                            case "zj":
+                                txt="总决赛";
+                                break;
+                            case "cq":
+                                txt="传奇赛";
+                                break;
+                            case "cs":
+                                txt="传说赛";
+                                break;
+                            case "cs2":
+                                txt="传说赛II";
+                                break;
+                            default:
+                                txt:""
+                        };
+                        _html+='<tr class="'+_level+'">';
+                        _html+='<td>'+_name+'</td>';
+                        _html+='<td>'+_team+'</td>';
+                        _html+='<td>'+txt+'</td>';
+                        _html+='<td>'+_date+'</td>';
+                        _html+='<td>'+version+'</td>';
+                        _html+='</tr>';
+                    };
+                    tar.innerHTML=_html;
+                };
+
+
+
+            }
+            // !function(){
+
+
+
+            //     var tar=$(".photo_list>a");
+            //     console.log(tar)
+            //     var main_data=[];
+            //     var nindex=getUrl();
+            //     console.log(nindex);
+            //     tar.each(function(){
+            //         var _href=$(this).attr("href")?$(this).attr("href"):"";
+            //         var _title=$(this).prop("title")?$(this).prop("title"):"";
+            //         main_data.push({
+            //             "src":_href,
+            //             "txt":title
+            //         })
+            //     });
+            //     console.log(main_data);
+            //     function getUrl(){
+            //         var href=window.location.search;
+            //         var arr=href.split("act=photo");
+            //         return arr[1];
+            //     }
+            //     function setLocal(name,data){
+            //         localStorage.setItem(name,JSON.stringify(data));
+            //     }
+            //     function getLocal(name){
+            //         return localStorage.getItem(name);
+            //     }
+            // }();
+        </script>
+    </body>
+</html>
