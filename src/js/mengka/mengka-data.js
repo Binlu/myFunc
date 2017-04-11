@@ -9,420 +9,420 @@ var origin_json={
                 name:"Q.理查德森",
                 team:"湖人",
                 position:"SF/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"W.约翰逊",
                 team:"湖人",
                 position:"SG/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"莱恩",
                 team:"太阳",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"普拉姆利",
                 team:"太阳",
                 position:"C/PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"夸梅.布朗",
                 team:"76人",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"J.安德森",
                 team:"76人",
                 position:"SG/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"图里亚夫",
                 team:"森林狼",
                 position:"C/PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"舍维德",
                 team:"森林狼",
                 position:"PG/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"斯蒂斯玛",
                 team:"鹈鹕",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"卡斯比",
                 team:"鹈鹕",
                 position:"SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"R.威廉姆斯",
                 team:"掘金",
                 position:"SF/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"弗耶",
                 team:"掘金",
                 position:"SG/PG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"R.怀特",
                 team:"国王",
                 position:"PF/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"C.兰德里",
                 team:"国王",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"维兰纽瓦",
                 team:"篮网",
                 position:"PF/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"R.布鲁尔",
                 team:"篮网",
                 position:"SG/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"布克",
                 team:"爵士",
                 position:"PF/C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"R.普莱斯",
                 team:"爵士",
                 position:"PG/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"比德林斯",
                 team:"火箭",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"加西亚",
                 team:"火箭",
                 position:"SF/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"奥斯比",
                 team:"灰熊",
                 position:"PF/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"贝勒斯",
                 team:"灰熊",
                 position:"PG/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"B.詹姆斯",
                 team:"小牛",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"J-克劳德",
                 team:"小牛",
                 position:"SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"M.莱昂纳德",
                 team:"开拓者",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"卡曼",
                 team:"开拓者",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"坎比",
                 team:"尼克斯",
                 position:"C/PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"肯扬.马丁",
                 team:"尼克斯",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"梅洛",
                 team:"雄鹿",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"D.鲍威尔",
                 team:"雄鹿",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"特克格鲁",
                 team:"魔术",
                 position:"SF/PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"T.哈里斯",
                 team:"魔术",
                 position:"SF/PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"R.霍林斯",
                 team:"快船",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"D.科里森",
                 team:"快船",
                 position:"PG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"J.埃文斯",
                 team:"雷霆",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"J.兰姆",
                 team:"雷霆",
                 position:"SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"A.米勒",
                 team:"奇才",
                 position:"PG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"塞拉芬",
                 team:"奇才",
                 position:"PF/C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"N.默罕默德",
                 team:"公牛",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"威利.格林",
                 team:"公牛",
                 position:"SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"辛格勒",
                 team:"活塞",
                 position:"SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"W.拜纳姆",
                 team:"活塞",
                 position:"PG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"J.康宁汉姆",
                 team:"步行者",
                 position:"SG/PG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"CJ.迈尔斯",
                 team:"步行者",
                 position:"SF/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"J.泰勒",
                 team:"黄蜂",
                 position:"SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"R.塞申斯",
                 team:"黄蜂",
                 position:"PG/SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"卡迪纳尔",
                 team:"凯尔特人",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"T.泽勒",
                 team:"凯尔特人",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"J.詹金斯",
                 team:"老鹰",
                 position:"SG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"阿永",
                 team:"老鹰",
                 position:"PF/C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"J.安东尼",
                 team:"热火",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"N.科尔",
                 team:"热火",
                 position:"PG",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"艾恩斯",
                 team:"马刺",
                 position:"PF/C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"R.杰弗森",
                 team:"马刺",
                 position:"SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"菲尔兹",
                 team:"猛龙",
                 position:"SG/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"T.汉斯布鲁",
                 team:"猛龙",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"艾泽里",
                 team:"勇士",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"B.拉什",
                 team:"勇士",
                 position:"SG/SF",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"C",
                 name:"本内特",
                 team:"骑士",
                 position:"C",
-                date:"3,4"
+                date:"1,3,4"
             },
             {
                 level:"B",
                 name:"A.哈灵顿",
                 team:"骑士",
                 position:"PF",
-                date:"3,4"
+                date:"1,3,4"
             }
         ],
         /*-----------------------------------新秀赛------------------------------------*/
@@ -432,420 +432,420 @@ var origin_json={
                 name:"Q.理查德森",
                 team:"湖人",
                 position:"SF/SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"亨利",
                 team:"湖人",
                 position:"SG/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"莱恩",
                 team:"太阳",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"香农.布朗",
                 team:"太阳",
                 position:"SG/PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"夸梅.布朗",
                 team:"76人",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"J.安德森",
                 team:"76人",
                 position:"SG/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"图里亚夫",
                 team:"森林狼",
                 position:"C/PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"巴莫特",
                 team:"森林狼",
                 position:"SF/PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"斯蒂斯玛",
                 team:"鹈鹕",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"卡斯比",
                 team:"鹈鹕",
                 position:"SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"R.威廉姆斯",
                 team:"掘金",
                 position:"SF/SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"德尔菲诺",
                 team:"掘金",
                 position:"SF/SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"R.怀特",
                 team:"国王",
                 position:"PF/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"麦克勒摩",
                 team:"国王",
                 position:"SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"J.泰勒",
                 team:"篮网",
                 position:"SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"R.布鲁尔",
                 team:"篮网",
                 position:"SG/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"布克",
                 team:"爵士",
                 position:"PF/C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"R.普莱斯",
                 team:"爵士",
                 position:"PG/SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"比德林斯",
                 team:"火箭",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"G.史密斯",
                 team:"火箭",
                 position:"PF/C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"奥斯比",
                 team:"灰熊",
                 position:"PF/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"贝勒斯",
                 team:"灰熊",
                 position:"PG/SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"B.詹姆斯",
                 team:"小牛",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"J.尼尔森",
                 team:"小牛",
                 position:"PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"M.莱昂纳德",
                 team:"开拓者",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"卡曼",
                 team:"开拓者",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"坎比",
                 team:"尼克斯",
                 position:"C/PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"戴勒姆波特",
                 team:"尼克斯",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"梅洛",
                 team:"雄鹿",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"K.马绍尔",
                 team:"雄鹿",
                 position:"PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"特克格鲁",
                 team:"魔术",
                 position:"SF/PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"A.戈登",
                 team:"魔术",
                 position:"PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"R.霍林斯",
                 team:"快船",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"D.科里森",
                 team:"快船",
                 position:"PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"J.埃文斯",
                 team:"雷霆",
                 position:"PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"J.兰姆",
                 team:"雷霆",
                 position:"SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"A.米勒",
                 team:"奇才",
                 position:"PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"塞拉芬",
                 team:"奇才",
                 position:"PF/C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"N.默罕默德",
                 team:"公牛",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"威利.格林",
                 team:"公牛",
                 position:"SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"辛格勒",
                 team:"活塞",
                 position:"SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"W.拜纳姆",
                 team:"活塞",
                 position:"PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"J.康宁汉姆",
                 team:"步行者",
                 position:"SG/PG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"CJ.迈尔斯",
                 team:"步行者",
                 position:"SF/SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"B.詹姆斯",
                 team:"黄蜂",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"M.韦伯斯特",
                 team:"黄蜂",
                 position:"SG/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"卡迪纳尔",
                 team:"凯尔特人",
                 position:"PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"A.哈灵顿",
                 team:"凯尔特人",
                 position:"PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"J.詹金斯",
                 team:"老鹰",
                 position:"SG",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"阿永",
                 team:"老鹰",
                 position:"PF/C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"J.安东尼",
                 team:"热火",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"哈斯勒姆",
                 team:"热火",
                 position:"PF/C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"艾恩斯",
                 team:"马刺",
                 position:"PF/C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"R.杰弗森",
                 team:"马刺",
                 position:"SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"菲尔兹",
                 team:"猛龙",
                 position:"SG/SF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"T.汉斯布鲁",
                 team:"猛龙",
                 position:"PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"艾泽里",
                 team:"勇士",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"J.奥尼尔",
                 team:"勇士",
                 position:"C/PF",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"C",
                 name:"本内特",
                 team:"骑士",
                 position:"C",
-                date:"4"
+                date:"1,4"
             },
             {
                 level:"B",
                 name:"A.哈灵顿",
                 team:"骑士",
                 position:"PF",
-                date:"4"
+                date:"1,4"
             }
         ],
         /*-----------------------------------季前赛--------------------------------*/ 
@@ -1278,7 +1278,7 @@ var origin_json={
                 name:"M.布鲁克斯",
                 team:"湖人",
                 position:"SG/SF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"A",
@@ -1289,10 +1289,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"尼克.杨",
+                team:"湖人",
+                position:"SG/SF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"PJ.塔克",
                 team:"太阳",
                 position:"SF/SG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1303,10 +1310,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"比斯利",
+                team:"太阳",
+                position:"SF/PF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"诺埃尔",
                 team:"76人",
                 position:"C/PF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1317,10 +1331,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"B.穆伦斯",
+                team:"76人",
+                position:"C",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"巴里亚",
                 team:"森林狼",
                 position:"PG/SG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1331,10 +1352,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"K.布鲁尔",
+                team:"森林狼",
+                position:"SG/SF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"T.埃文斯",
                 team:"鹈鹕",
                 position:"SG/SF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1345,10 +1373,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"马克希尔",
+                team:"鹈鹕",
+                position:"PF/C",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"弗耶",
                 team:"掘金",
                 position:"SG/PG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1359,10 +1394,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"D.亚瑟",
+                team:"掘金",
+                position:"PF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"R.埃文斯",
                 team:"国王",
                 position:"PF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1373,10 +1415,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"J.汤普森",
+                team:"国王",
+                position:"PF/C",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"布莱切",
                 team:"篮网",
                 position:"C/PF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1387,10 +1436,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"特里",
+                team:"篮网",
+                position:"SG/PG",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"坎特",
                 team:"爵士",
                 position:"C",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1400,11 +1456,18 @@ var origin_json={
                 date:"4"
             },
             {
+                level:"A",
+                name:"费沃斯",
+                team:"爵士",
+                position:"PF/C",
+                date:"2"
+            },
+            {
                 level:"B",
                 name:"I.史密斯",
                 team:"火箭",
                 position:"PG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1415,10 +1478,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"阿里扎",
+                team:"火箭",
+                position:"SF/SG",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"庞德塞特",
                 team:"灰熊",
                 position:"SF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"A",
@@ -1429,10 +1499,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"OJ.梅奥",
+                team:"灰熊",
+                position:"SG/PG",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"D.哈里斯",
                 team:"小牛",
                 position:"PG/SG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1443,10 +1520,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"B.莱特",
+                team:"小牛",
+                position:"C/PF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"T.罗宾逊",
                 team:"开拓者",
                 position:"PF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1457,10 +1541,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"S.布莱克",
+                team:"开拓者",
+                position:"PG/SG",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"普里吉奥尼",
                 team:"尼克斯",
                 position:"PG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1471,10 +1562,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"E.克拉克",
+                team:"尼克斯",
+                position:"PF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"尤度",
                 team:"雄鹿",
                 position:"PF/C",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1485,10 +1583,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"B.奈特",
+                team:"雄鹿",
+                position:"PG/SG",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"哈克莱斯",
                 team:"魔术",
                 position:"SF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1499,10 +1604,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"B.戈登",
+                team:"魔术",
+                position:"SG",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"杜德里",
                 team:"快船",
                 position:"SF/SG",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1513,10 +1625,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"A.贾米森",
+                team:"快船",
+                position:"PF/SF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"N.科里森",
                 team:"雷霆",
                 position:"PF/C",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1526,11 +1645,18 @@ var origin_json={
                 date:"4"
             },
             {
+                level:"A",
+                name:"帕金斯",
+                team:"雷霆",
+                position:"C",
+                date:"2"
+            },
+            {
                 level:"B",
                 name:"D.布莱尔",
                 team:"奇才",
                 position:"PF/C",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1541,10 +1667,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"O.波特",
+                team:"奇才",
+                position:"SF",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"邓利维",
                 team:"公牛",
                 position:"SG/SF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
@@ -1555,10 +1688,17 @@ var origin_json={
             },
             {
                 level:"B",
+                name:"A.兰多夫",
+                team:"公牛",
+                position:"PF/C",
+                date:"2"
+            },
+            {
+                level:"B",
                 name:"杰雷布科",
                 team:"活塞",
                 position:"PF/SF",
-                date:"4"
+                date:"2,4"
             },
             {
                 level:"B",
