@@ -19,6 +19,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"J.希尔",
+                team:"湖人",
+                position:"C/PF",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"莱恩",
                 team:"太阳",
@@ -31,6 +38,13 @@ var origin_json={
                 team:"太阳",
                 position:"C/PF",
                 date:"1,3,4"
+            },
+            {
+                level:"B",
+                name:"奥卡福",
+                team:"太阳",
+                position:"C/PF",
+                date:"7"
             },
             {
                 level:"C",
@@ -47,6 +61,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"B.穆伦斯",
+                team:"76人",
+                position:"C",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"图里亚夫",
                 team:"森林狼",
@@ -59,6 +80,13 @@ var origin_json={
                 team:"森林狼",
                 position:"PG/SG",
                 date:"1,3,4"
+            },
+            {
+                level:"B",
+                name:"D.康宁汉姆",
+                team:"森林狼",
+                position:"SF/PF",
+                date:"7"
             },
             {
                 level:"C",
@@ -75,6 +103,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"马克希尔",
+                team:"鹈鹕",
+                position:"PF/C",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"R.威廉姆斯",
                 team:"掘金",
@@ -87,6 +122,13 @@ var origin_json={
                 team:"掘金",
                 position:"SG/PG",
                 date:"1,3,4"
+            },
+            {
+                level:"B",
+                name:"D.亚瑟",
+                team:"掘金",
+                position:"PF",
+                date:"7"
             },
             {
                 level:"C",
@@ -103,6 +145,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"Der.威廉姆斯",
+                team:"国王",
+                position:"PF/SF",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"维兰纽瓦",
                 team:"篮网",
@@ -115,6 +164,13 @@ var origin_json={
                 team:"篮网",
                 position:"SG/SF",
                 date:"1,3,4"
+            },
+            {
+                level:"B",
+                name:"特里",
+                team:"篮网",
+                position:"SG/PG",
+                date:"7"
             },
             {
                 level:"C",
@@ -131,6 +187,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"A.伯克斯",
+                team:"爵士",
+                position:"SG",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"比德林斯",
                 team:"火箭",
@@ -143,6 +206,13 @@ var origin_json={
                 team:"火箭",
                 position:"SF/SG",
                 date:"1,3,4"
+            },
+            {
+                level:"B",
+                name:"卡南",
+                team:"火箭",
+                position:"PG",
+                date:"7"
             },
             {
                 level:"C",
@@ -159,6 +229,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"库佛斯",
+                team:"灰熊",
+                position:"C",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"B.詹姆斯",
                 team:"小牛",
@@ -173,6 +250,13 @@ var origin_json={
                 date:"1,3,4"
             },
             {
+                level:"B",
+                name:"费尔顿",
+                team:"小牛",
+                position:"PG/SG",
+                date:"7"
+            },
+            {
                 level:"C",
                 name:"M.莱昂纳德",
                 team:"开拓者",
@@ -185,6 +269,13 @@ var origin_json={
                 team:"开拓者",
                 position:"C",
                 date:"1,3,4"
+            },
+            {
+                level:"B",
+                name:"D.莱特",
+                team:"开拓者",
+                position:"SF",
+                date:"7"
             },
             {
                 level:"C",
