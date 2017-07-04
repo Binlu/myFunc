@@ -1,0 +1,152 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%><link rel="stylesheet" type="text/css" href="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/css/login/login.css?version=2017/04/11"/><%/block%>
+<%block name="main"%>
+
+<!-- content -->
+<div id="content" class="content clear">
+	<!-- 登录框 -->
+	<div class="login-box">
+		<div class="section clear">
+			<div class="login-div">
+				<h3>登录</h3>
+				<form class="js-form-ele" name="loginForm" action="loginHandler.php" method="POST" target="_self">
+					<!--隐藏域-->
+					<input type="hidden" id="hidRandCode" name="hidRandCode" value="759">
+					<input type="hidden" id="hidEncryptCode" name="hidEncryptCode" value="">
+					<!-- 账户 -->
+					<label class="account-label" for="username"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/account.png" alt="icon"></label>
+					<input class="input-area js-input-area" name="account" type="text" id="username" placeholder="请输入用户名" maxlength="40">
+					<p class="error-p js-error-ele"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/icon7.png" alt="icon">请输入正确的用户名</p>
+					<!-- 密码 -->
+					<label class="pass-label" for="password"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/password.png" alt="icon"></label>
+					<input class="input-area js-input-area" name="passwd" type="password" id="password" placeholder="请输入密码" maxlength="40">
+					<p class="error-p js-error-ele"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/icon7.png" alt="icon">请输入正确的密码</p>
+					<!-- 图片验证码 -->
+					<label class="code-label" for="code"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/auth-code.png" alt="icon"></label>
+					<span class="code-span clear">
+						<input class="js-input-area js-code" id="code" name="code" type="text" placeholder="请输入验证码" maxlength="4"/>
+						<img src="/register.php?_a=imagesCode" alt="img-code" onclick="this.src=&quot;/register.php?_a=imagesCode&amp;&quot;+Math.random();"/>
+					</span>
+					<p class="error-p js-error-ele"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/icon7.png" alt="icon">请输入正确的验证码</p>
+					<!-- 提交按钮 -->
+					<input type="submit" value="立即登录" class="login-btn js-login-btn">
+					<div class="go-register">
+						<a href="/register.php?_a=new-account" title="POP用户注册">立即注册</a>
+					</div>
+					<!-- 密码相关 -->
+					<div class="pass-method clear not-selected">
+						<!-- <input id="check-area" class="hide" name="checkbox1" type="checkbox" value="">
+						<label class="js-check-area" for="check-area"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/n-check.png" alt="icon">30天内免登陆</label> -->
+						<a href="forget_password.php" title="忘记密码"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/login/icon1.png" alt="icon">忘记密码了吗？</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- contents -->
+<%/block%>
+
+<%block name="self"%>
+
+ <script type="text/javascript">
+	
+	require.config({
+		paths:{
+			"msg":[WEB_GLOBAL_IMG_URL_NEW+"/global/src/js/method/pop-msg-1.0"]
+		},
+		skim:{
+			"msg": {
+	　　　　　　deps: ["jquery"],
+	　　　　　　exports: "msg"
+	　　　　}
+		}
+	});
+	require(["jquery","general","msg"],function(jquery,general){
+		$(function(){
+			// pop.msg({"txt":"欢迎登录pop！"},1200);       //弹出提示层
+
+			var def={
+	            check_src:general.def.img_href+"login/check.png",
+	            no_check_src:general.def.img_href+"login/n-check.png"
+	        };
+			
+			// input判断
+	        $(".js-input-area").on("focus",function(){
+	            var tar=$(this).hasClass("js-code")?$(this).parent().next(".js-error-ele"):$(this).next(".js-error-ele");
+	            tar.css({"opacity":0});
+	        }).on("blur",function(){
+	            var index=$(".js-input-area").index($(this));
+	            var is_ok=true,txt=$(this).val();
+	            var tar=$(this).hasClass("js-code")?$(this).parent().next(".js-error-ele"):$(this).next(".js-error-ele");
+	            txt=txt.replace(/\s/g,"");
+            	// console.log(txt);
+	            switch(index){
+	                case 0:
+	                    if(txt=="" || general.fn.getCharacterLen(txt)<4){
+	                        is_ok=false;
+	                    }
+	                    break;
+	                case 1:
+	                    if(txt=="" || general.fn.getCharacterLen(txt)<6){
+	                        is_ok=false;
+	                    }
+	                    break;
+	                case 2:
+	                    if(txt=="" || txt.length<4){
+	                        is_ok=false;
+	                    }
+	                    break;
+	                default:
+	                    break;
+	            }
+	            if(is_ok==true){
+	                tar.css({"opacity":0});
+	            }else{
+	                tar.css({"opacity":1});
+	            }
+	        });
+
+			// 提交数据
+	        $(".js-form-ele").on("submit",function(){
+	            var str=$(this).serialize();
+	            var data=general.fn.getLocationParameter("?"+str);
+	            // console.log(data);
+	            var error_eles=$(".js-error-ele");
+	            if(data["account"]=="" || general.fn.getCharacterLen(data["account"])<4 || general.fn.getCharacterLen(data["account"])>20){
+	                error_eles.eq(0).css({"opacity":1});
+	                return false;
+	            }else if(data["passwd"]=="" || general.fn.getCharacterLen(data["passwd"])<6 || general.fn.getCharacterLen(data["passwd"])>20){
+	                error_eles.eq(1).css({"opacity":1});
+	                return false;
+	            }else if(data["code"]=="" || data["code"].length<4){
+	                error_eles.eq(2).css({"opacity":1});
+	                return false;
+	            }else{
+	                // 可以提交数据
+	                // pop.msg({"txt":"登录成功！",btn:true},function(){
+	                //     window.location.href="http://www.pop136.com/";
+	                // });
+	                // return false;
+	            }
+	        });
+			
+
+			// 选择记住密码
+			var check_ele=$(".js-check-area"),check_tag_img=check_ele.children("img"),ncheck_src="n-check.png",check_src="check.png";
+			check_ele.on("click",function(){
+				if(!$(this).hasClass("js-now")){
+					$(this).addClass("js-now");
+					check_tag_img.attr("src",def.check_src);
+				}else{
+					$(this).removeClass("js-now");
+					check_tag_img.attr("src",def.no_check_src);
+				}
+				
+			});
+		});
+	});
+	
+</script>
+<%/block%>
+       

@@ -1,0 +1,9 @@
+define(function(){
+	return [{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d1.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x1.jpg","title":"\u6d3b\u52a8\u5f00\u59cb\u524d"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d2.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x2.jpg","title":"POP\u9ad8\u7aef\u4e66\u7c4d\u5c55\u793a"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d3.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x3.jpg","title":"\u6765\u5bbe\u6709\u5e8f\u7b7e\u5230"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d4.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x4.jpg","title":"\u5ba2\u6237\u7ffb\u9605\u4e66\u7c4d"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d5.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x5.jpg","title":"\u4e3a\u5ba2\u6237\u8fdb\u884c\u8bb2\u89e3"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d6.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x6.jpg","title":"\u6e29\u5dde\u5e02\u978b\u9769\u884c\u4e1a\u534f\u4f1a\u526f\u79d8\u4e66\u957f\u9ec4\u6167"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d7.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x7.jpg","title":"\u978b\u9769\u884c\u4e1a\u534f\u4f1a\u521b\u65b0\u4e0e\u6280\u672f\u59d4\u5458\u4f1a\u4f1a\u957f\u90d1\u56fd\u5b8f\uff08\u5de6\uff09"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d8.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x8.jpg","title":"POP\u526f\u603b\u88c1\u4faf\u5fd7\u594e\u5148\u751f"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d9.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x9.jpg","title":"\u5927\u8bb2\u5802\u73b0\u573a"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/d10.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h59\/x10.jpg","title":"POP\u978b\u54c1\u4e2d\u5fc3\u7ecf\u7406\u5415\u5b88\u5b87"}]
+
+});
+
+
+
+
+

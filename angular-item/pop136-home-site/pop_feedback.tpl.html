@@ -1,0 +1,181 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+	<style type="text/css">
+		/* title */
+		.title-contain {text-align: center;margin-bottom: 40px;}
+		.title-box{position: relative; display:inline-block; *display: inline; *zoom:1; padding: 0 20px; height: 28px; border-bottom: 2px solid #333; margin: 0 auto;text-align: center;*margin-bottom: 10px; }
+		.title-box>strong{font-size: 36px;color: #333333;vertical-align: middle; padding: 0 20px;height: 50px; line-height: 50px; background: white;display:inline-block; *display: inline; *zoom:1; font-weight: normal; }
+		
+		/*侧边栏按钮*/
+		.link-btns{display: none;position: fixed;right: 20px;bottom: 50px;z-index: 100;overflow: hidden;}
+		.link-btns>a{display: block;width: 80px;height: 80px;margin-bottom: 2px;position: relative;z-index: 7;color: #FAFAFA;cursor: pointer;}
+		.link-btns>a>.back-box{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: #000000;opacity: 0.5;filter: alpha(opacity=50);z-index: 8;}
+		.link-btns>a>.msg-contain{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;padding-top: 10px;text-align: center;}
+		.link-btns .msg-contain>p{padding-top: 6px;}
+		.link-btns .normal-btn p{font-size: 14px;}
+		.link-btns .normal-btn img{width: 26px;margin-top: 5px;}
+		.link-btns .top-btn img{width: 33px;margin-top: 10px;}
+		
+		.feed-section{padding-bottom: 20px;}
+		.nav-links {line-height: 22px;font-size: 16px; padding: 50px 0 30px;}
+		.nav-links>a {color: #333333;}
+		.nav-links>img {width: 8px;vertical-align: middle;}
+		.nav-links>.current-link {color: #FB3352;}
+		
+		.feed-msg{border: 1px solid #DFE0E3;padding: 42px 30px 42px 52px;color: #333333;}
+		.feed-msg>h3{font-size: 16px;font-weight: bold;padding-bottom: 9px;}
+		.feed-msg>p{font-size: 14px;padding-bottom: 26px;}
+		.feed-msg span{font-size: 18px;color: #FB3352;display:inline-block;*display: inline;*zoom: 1; vertical-align: -7px;width: 3%;}
+		.feed-msg .input-list>div{float: left;width: 50%;}
+		.feed-msg .input-list input{vertical-align: middle;height: 40px;line-height: 40px;text-indent: 16px;font-size: 14px;background: #F5F5F5;border-radius: 8px;border: none;width: 92%;}
+
+		.proposal-text{padding-top: 20px;}
+		.proposal-text>span{vertical-align: 151px;width: 1.5%;}
+		.proposal-text>textarea{resize:none;outline: none; height: 160px;padding: 10px 0; width: 95.9%; text-indent: 16px;font-size: 14px;background: #F5F5F5;border-radius: 8px;border: none;}
+		/*提交*/
+		.commit-btn{text-align: center;padding-top: 50px;}
+		.commit-btn>button{background: #FB3352;height: 48px;line-height: 48px;font-size: 18px;color: #FFFFFF;width: 26%;}
+		.commit-btn>button:hover{background-color: #e60c2e}
+		.commit-btn>button.disabled-ele{background: #eee;color: #999}
+		.commit-btn>button.disabled-ele:hover{background: #eee;color: #999}
+		
+	</style>
+	
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+	<div class="feed-section">
+		<div class="section">
+			<div class="nav-links">
+				<a href="http://www.pop136.com/" title="首页" target="_self">首页</a>
+				<img src="http://img2.p.pop-fashion.com/global/src/images/about/nav-btn.png" alt="logo">
+				<span class="current-link">意见反馈</span>
+			</div>
+			
+			<div class="feed-contain">
+				<div class="title-contain">
+		            <div class="title-box">
+		                <strong>意见反馈</strong>
+		            </div>
+		        </div>
+				
+				<div class="feed-msg">
+					<h3>您的建议或意见</h3>
+					<p>如果您在使用网站过程中遇到任何问题，可随时拨打服务热线：400-210-662</p>
+					<form class="js-form-ele">
+						<div class="clear input-list">
+							<div class="name-input"><span>*</span><input class="js-input-area" type="text" name="username" value="" placeholder="您的姓名" /></div>
+							<div class="tel-input"><span>*</span><input class="js-input-area" type="text" name="mobile" value="" maxlength="11" placeholder="您的电话"/></div>
+						</div>
+						<div class="proposal-text">
+							<span>*</span><textarea  class="proposal js-input-area" name="mome" placeholder="请在此描述您的具体建议或意见"></textarea>
+						</div>
+						
+					</form>
+				</div>
+				
+				<div class="commit-btn">
+					<button class="disabled-ele js-commit" title="尽快推出" target="_self">尽快推出</button>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+    <a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+            <p>常见问题</p>
+        </div>
+    </a>
+    <a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+        </div>
+    </a>
+</div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    require(["jquery","general","msg"],function(jquery,general){
+        $(function(){
+        	//提交
+	        $(".js-commit").on("click",function(){
+	            // subFunc($(this));
+	        });
+
+	        //提交数据
+	        function subFunc(obj){
+	            var str = decodeURIComponent( $(".js-form-ele").serialize() , true );
+	            var data=general.fn.getLocationParameter("?"+str);
+	            var re=/^1[1-9]{1}[0-9]{9}$/;
+	            if(data["username"]==""){
+	                pop.msg({"txt":"请输入您的姓名。"},1200);
+	            }else if(data["mobile"]=="" || !re.test(data["mobile"])){
+	                pop.msg({"txt":"填写正确的手机号码。"},1200);
+	            }else if(data["mome"]==""){
+	                pop.msg({"txt":"填写您要反馈的意见。"},1200);
+	            }else{
+	                // 可以提交数据
+	                obj.off("click");
+	                obj.text("提交中...").addClass("disabled-ele");
+	                return;
+	                general.fn.subAjax({
+	                    ctp:"application/x-www-form-urlencoded",
+	                    url:"/register.php?_a=new-account-do",
+	                    data:{
+	                        username:data["username"],
+	                        mobile:data["mobile"],
+	                        mome:data["mome"]
+	                    },
+	                    successFunc:function(data){
+	                        // console.log(data);
+	                        obj.on("click",function(){
+	                            subFunc($(this));
+	                        });
+	                        obj.text("提交").removeClass("disabled-ele");
+	                        pop.msg({"txt":"反馈成功！",btn:true},function(){
+	                            $(".js-form-ele").find("input").val("");
+	                        });
+	                    },
+	                    errorFunc:function(){
+	                        obj.on("click",function(){
+	                            subFunc($(this));
+	                        });
+	                        obj.text("提交").removeClass("disabled-ele");
+	                    },
+	                });
+	            }
+	        };
+
+
+            //返回顶部按钮
+            var right_box_ele=$(".js-right-box");
+            $(".js-top-btn").on("click",function(e){
+                $("html,body").animate({"scrollTop":0},500);
+            });
+            // 滚动监听
+            setRightFunc($(window).scrollTop());
+            $(window).on("scroll",function(){
+                var nscroll_y=$(this).scrollTop();
+                setRightFunc(nscroll_y);
+            });
+            function setRightFunc(y){
+                if(y>0){
+                    right_box_ele.show();
+                }else{
+                    right_box_ele.hide();
+                }
+            };
+        });
+    });
+</script>
+<%/block%>

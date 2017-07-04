@@ -1,0 +1,110 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+	<link rel="stylesheet" type="text/css" href="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/css/about/news.css?version=2017/03/16"/>
+	
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+    <!-- 新闻详细 -->
+    <!--<%$news_info.title%> 
+    
+    <%$news_info.body%>--> 
+    <!-- /新闻详细 -->
+    <div class="media-detail common-page">
+		<div class="section">
+			<div class="nav-links">
+				<a href="http://www.pop136.com/" title="首页" target="_self">首页</a>
+				<img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+				<a href="/aboutpop.php?sn=4" title="新闻报道" target="_self">新闻报道</a>
+				<img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+				<a href="/pop_news.php?is_nw=<%$news_info.is_nw%>" title="媒体新闻" target="_self"><%if $news_info.is_nw%>媒体新闻<%else%>公司新闻<%/if%></a>
+				<img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+				<span class="current-link">内容详情</span>
+			</div>
+			<h2 class="title-hd"><%$news_info.title%></h2>
+			<div class="media-msg">
+				<%$news_info.body%>
+				<!--<div class="media-hd">
+					首尔时装周下个月（3月27日~3月31日） 即将开幕！POP首尔时装周考察行报名正式开启！喜欢韩国本土设计不能错过！
+		　　			<p>活动简介</p>
+					<p>本次韩国行活动由POP（全球）时尚网络机构发起，邀请POP VIP会员赴韩观看2017首尔时装周、参与买手活动、面料以及辅料市场调查、商圈考察、设计师交流等活动！上海直飞首尔 5天4夜（3月27日~3月31日），精彩行程期待您的参加！</p>
+					<p>行程特色</p>
+				</div>
+				<div class="media-item">
+					1首尔时装周观秀
+		　　			<p>首尔时装周 Seoul Fashion Week 作为韩国最大的时装周和纽约，巴黎，伦敦，米兰，东京并称世界六大时装周。此次有众多韩国著名设计师参加首尔时装周发布，每季当红明星、超模以及潮人都会出现在时装周上！韩国穿搭既实穿又不乏流行元素，非常值得学习！</p>
+					<img src="http://img1.p.pop-fashion.com/global/src/images/indexService/bachelor.jpg" alt="服务">
+					<img src="http://img1.p.pop-fashion.com/global/src/images/indexService/bachelor.jpg" alt="服务">
+				</div>
+				<div class="media-item">
+					2导师全程讲解
+		　　			<p>全程导师制，让考察学习更有的放矢，更确保成员获得最前沿的时尚讯息。</p>
+					<img src="http://img1.p.pop-fashion.com/global/src/images/indexService/bachelor.jpg" alt="服务">
+				</div>
+				<div class="media-item">
+					3韩国市场考察
+		　　			<p>对韩国最大服装市场以及面辅料市场进行考察，寻找新的设计元素，观察韩国服装产业供应模式 。</p>
+					<img src="http://img1.p.pop-fashion.com/global/src/images/indexService/bachelor.jpg" alt="服务">
+				</div>
+				<div class="media-footer">
+					<p>参与须知</p>
+					<p>由于大家来自不同的城市，具体出发时间以实际而定，统一到达时间为首尔时间3月27日14:00到达仁川机场，集合后乘机场大巴直达酒店；如延误未搭乘者，可乘坐仁川机场巴士 6001 号，直达酒店正门口（15 分钟/班），酒店距离东大门夜市、面料市场步行5-10 分钟。距离仁川机场集合点是当日通过微信群当场发。</p>
+					<p>酒店名称：COOP RESIDENCE HOTEL</p>
+					<p>酒店网址：www.residences.co-op.co.kr</p>
+					<p>酒店联系方式：0082-2-2279-4500</p>
+					<p>酒店地址：首尔市中区乙支路-6街 32 CO-OP Residence</p>
+					<p>报名方式</p>
+					<p>联系人：王女士</p>
+					<p>手机号码：18221604492</p>
+				</div>-->
+					
+			</div>
+		</div>		
+	</div>
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+	<a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+		<div class="back-box"></div>
+		<div class="msg-contain">
+			<img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+			<p>常见问题</p>
+		</div>
+	</a>
+	<a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+		<div class="back-box"></div>
+		<div class="msg-contain">
+			<img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+		</div>
+	</a>
+</div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    require(["jquery"],function(jquery){
+        $(function(){
+            //返回顶部按钮
+            var right_box_ele=$(".js-right-box");
+            $(".js-top-btn").on("click",function(e){
+                $("html,body").animate({"scrollTop":0},500);
+            });
+            // 滚动监听
+            setRightFunc($(window).scrollTop());
+            $(window).on("scroll",function(){
+                var nscroll_y=$(this).scrollTop();
+                setRightFunc(nscroll_y);
+            });
+            function setRightFunc(y){
+                if(y>0){
+                    right_box_ele.show();
+                }else{
+                    right_box_ele.hide();
+                }
+            };
+        });
+    });
+</script>
+<%/block%>

@@ -1,0 +1,28 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+    <style type="text/css">
+        .content-section{padding: 80px 0;text-align: center;}
+        .content-section>img{width: 54%;margin-bottom: 30px;}
+        .content-section>p{font-size: 12px;margin-bottom: 8px;color: #999;}
+        .content-section>label{font-size: 14px;margin-right: 5px;color: #666;}
+        .reload-btn{font-size: 14px;color: #FB3352;font-weight: 600}
+    </style>
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+    <div class="section content-section">
+        <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/common/500.png" alt="500">
+        <p>我们的服务器有一点轻微的感冒～<br/>
+        我们已尽通知程序员哥哥</p>
+        <label>您可以：</label><a class="reload-btn" target="_self" href="<%$httpReferer%>" title="刷新试试哦 ～">刷新试试哦 ～</a><br/>
+    </div>
+</div>
+<!-- contents -->
+<!-- other -->
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    console.log(656/1200)
+</script>
+<%/block%>

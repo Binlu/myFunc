@@ -1,0 +1,53 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+<link rel="stylesheet" type="text/css" href="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/css/about/company-photo-detail.css?version=2017/03/29">
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+    <div class="section photos-detail-box js-photos-detail-box">
+        <div class="nav-links">
+            <a href="/" title="首页" target="_self">首页</a>
+            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+            <a href="/aboutpop.php?sn=6" title="企业相册" target="_self">企业相册</a>
+            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+            <span class="current-link">相册详情</span>
+        </div>
+        <ul class="photos-detail-list clear js-photos-detail-list">
+            
+        </ul>
+        <!-- 分页 -->
+        <div class="page-controller js-page-controller"></div>
+    </div>
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+	<a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+		<div class="back-box"></div>
+		<div class="msg-contain">
+			<img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+			<p>常见问题</p>
+		</div>
+	</a>
+	<a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+		<div class="back-box"></div>
+		<div class="msg-contain">
+			<img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+		</div>
+	</a>
+</div>
+<!-- 图片展示 -->
+<div class="show-pic-box js-show-pic-box">
+    <img class="js-show-pic" src="#" alt="浏览大图"/><br/>
+    <span class="js-txt"></span>
+    <button class="show-close js-close-btn" title="关闭"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/about/icon3.png" alt="关闭"></button>
+    <button class="show-btn js-prev-btn" title="上一张"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/about/prev.png" alt="上一张"></button>
+    <button class="show-btn show-right-btn js-next-btn" title="下一张"><img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/about/next.png" alt="下一张"></button>
+</div>
+<div class="bg-div js-bg"></div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript" src="<%$WEB_GLOBAL_JS_URL_NEW%>/global/src/js/about/company-photo-detail.js?version=2017/04/13"></script>
+<%/block%>

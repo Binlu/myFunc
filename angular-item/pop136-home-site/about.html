@@ -1,0 +1,1180 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+    <link rel="stylesheet" type="text/css" href="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/css/about/about.css?version=2017/04/14"/>
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+    <div class="top-bg">
+        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/banner1.jpg" alt="bg"/>
+        <!-- nav -->
+        <div class="nav-div">
+            <ul class="section level-two-list">
+                <li><a <%if 1==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=1" target="_self" title="POP简介">POP简介</a></li>
+                <li><a <%if 2==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=2" target="_self" title="企业文化">企业文化</a></li>
+                <li><a <%if 3==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=3" target="_self" title="企业荣誉">企业荣誉</a></li>
+                <li><a <%if 4==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=4" target="_self" title="新闻报道">新闻报道</a></li>
+                <li><a <%if 5==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=5" target="_self" title="发展历程">发展历程</a></li>
+                <li><a <%if 6==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=6" target="_self" title="企业相册">企业相册</a></li>
+                <li><a <%if 7==$sn%>class="cur"<%/if%> href="aboutpop.php?sn=7" target="_self" title="招贤纳士">招贤纳士</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- detail -->
+    <%if 1==$sn%>
+        <!-- 简介 -->
+        <div class="detail-section introduction-section">
+            <div class="section">
+                <h2>逸尚云联</h2>
+                <p>上海逸尚云联信息技术股份有限公司（简称“逸尚云联”）是中国首家为时尚行业提供流行资讯及供应链全套解决方案的信息技术公司，旗下包括两个主要的网络信息平台——“POP（全球）时尚网络机构”和“ULB优料宝”，以及一个遍及全国的“设界-线下时尚设计联合空间”。</p>
+                <p>2015年，逸尚云联成为首家“互联网时尚设计供应链”的上市公司（股票代码834485）。目前业务覆盖国内80％的纺织服装市场，在“时尚资讯研究”、“面料交易平台”和“时尚商业孵化落地”等方面坚持不断创新，始终引领着业内互联科技和时尚潮流，率先提出业内“快反应体系”及其相应的柔性供应链全套解决方案。近年来公司在时尚产业链服务，数据信息化方面不断投入，取得了丰硕的成果。</p>
+            </div>
+            <div class="structure-section">
+                <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/icon1.png" alt="icon"/>
+            </div>
+            <div class="txt-section section">
+
+                <h3>POP（全球）时尚网络机构（简称“POP”）——服饰研发平台</h3>
+                <p>POP创办于2004年，依托于“国际视野、本土观念”的专业趋势研究团队，我们紧密关注着新的消费行为和消费态度；深刻理解社会文化、经济、艺术、技术、美学等领域的潮流；深入研究生活方式和流行趋势；准确把握时尚商业、社交等领域的创新，通过平台每日上万图片的更新，用颜色智慧、图案趋势、工艺潮流、文化元素等最新时尚资讯激发纱线、面辅料和服饰设计人员灵感、帮助专业工作人员提高工作效率。</p>
+                <p>POP还通过大数据分析预测、发布趋势报告，开创了业内先进的服饰研发信息管理模式。目前POP涉足了服装、纺织、鞋、包、家纺、珠宝等6个行业。</p>
+
+                <h3>优料宝（ULB）——优质现货面料B2B交易平台</h3>
+                <p>优料宝（ULB）创办于2015年，是一个专门提供面料交易的B2B平台，也是目前中国最大的现货交易平台。优料宝平台采用先进的“图像识别搜索技术”和“3D成衣技术”，主要针对服饰企业和纺织面料企业，实现服饰企业快速采购面料，帮助面料企业多渠道销售面料，开创中国面料交易环节中设计师采购专属通道。目前入驻平台的面料商户达3万家。</p>
+
+                <h3>设界——线下时尚设计联合空间</h3>
+                <p>2016年1月，“设界”模式诞生。设界以“趋势、款式、面料”整体发布落地流行资讯，融合“高端游学、时尚商务培训、VIP沙龙、品牌对接会”等时尚工作和生活项目，整合服饰产业“快反应柔性供应链”，依托线上大数据分析服务，从“采撷灵感、购买原料”到“商业孵化”，给予设计师一条龙落地的立体商业服务，开创了时尚行业线上线下有机融合的服务模式。</p>
+                <p>设界展厅布局在全国各个服装设计师集中活动的主要时尚商业城市，如上海、杭州、石狮等地，致力于近距离带给设计师“工作+学习+生活”的体验空间。</p>
+                <p>逸尚云联始终专注于时尚产业，经过12年在业内勤恳耕耘，不仅与纺织服饰行业的众多忠实客户，而且与国内外各界，诸如政府、院校、各大专业展会、各专业趋势研究机构等合作伙伴形成了良好的合作关系，从而扩大了业内外时尚影响力。</p>
+                <p>目前，逸尚云联也在积极运营专业教育（网络直播讲堂、线下沙龙讲座、海外游学商旅等）及开拓行业资源联盟（原创设计师联盟、showroom联盟、供应商联盟、协会院校联盟等），将线上级线下资源进行整合对接，实现“递进成长、快速营销、共赢互利”，共同促进服饰行业发展。</p>
+                <h3 style="margin-top:80px">
+                    逸尚云联将继续以时尚设计师为核心，更好地服务于我们的客户<br/>
+                    积极承担企业社会责任，推进我国时尚产业的发展。
+                </h3>
+            </div>
+        </div>
+    <%elseif 2==$sn%>
+        <div class="detail-section about-section">
+            <!--企业观念-->
+            <div class="enterprise-section">
+                <div class="section">
+                    <div class="title-box">
+                        <strong>企业观念</strong>
+                    </div>
+                    <ul class="common-list clear">
+                        <li>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-1.jpg" alt="企业愿景"/>
+                            <p>企业愿景</p>
+                            <div class="enterprise-msg">
+                                做服饰研发的必备平台
+                            </div>
+                        </li>
+                        <li class="list-center">
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture2.jpg" alt="企业使命"/>
+                            <p>企业使命</p>
+                            <div class="enterprise-msg">
+                                我们提供最及时、准确、<br/>方便的服饰资讯让研发变快乐
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture3.jpg" alt="企业价值观"/>
+                            <p>企业价值观</p>
+                            <div class="enterprise-msg">
+                                责任、高效、进取、开放
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--经营理念图-->
+            <div class="management-section">
+                <div class="title-box">
+                    <strong>经营理念图</strong>
+                </div>
+                <div class="management-msg">
+                    <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/banner3.jpg"/>
+                    <div class="management-list">
+                        <ul class=" section clear">
+                            <li>
+                                <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/ping.png"/>
+                                <p>公平竞争、出类拔萃<br/>平凡的人做超凡的事<br/>努力构建最大的专业时尚资讯平台</p>
+                            </li>
+                            <li>
+                                <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/yi.png"/>
+                                <p>良好的沟通交流<br/>寻找最简易高效的工作方式<br/>积极提供设计最简易有效的时尚<br/>资讯获取方式</p>
+                            </li>
+                            <li>
+                                <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/jing.png"/>
+                                <p> 贴近客户需求<br/>贴近时尚前端<br/>紧密团结、靠近目标、超越目标</p>
+                            </li>
+                            <li>
+                                <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/ren.png"/>
+                                <p>以人为本、以客户为本<br/>服务客户、福利员工<br/>打造完美的团队</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--社会责任-->
+            <div class="sociology-section">
+                <div class="section">
+                    <div class="title-box">
+                        <strong>社会责任</strong>
+                    </div>
+                    <div class="sociology-disc">
+                        POP秉持企业的文化和价值观，致力于公益事业的发展，对中国设计教育、时尚产业、环境保护等方面格外关注。
+    　　                          <p>
+                            自 2004 年成立伊始，POP开始在中国展 开一系列的公益实践。我们的“时尚图书馆计划”已根植于上海工程技术大学艺术学院、东华大学服装设计专业、温州市图书馆等多所国内高校和市民图书馆；并长期义务为国内初创型企业及转型中的中小企业提供电子商务咨询和培训，POP希望利用自己的资源和优势，为中国的时尚设计尽绵薄之力，助力中国时尚产业的发展。
+                        </p>
+                    </div>
+                    <ul class="common-list clear">
+                        <li>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture4.jpg" alt="上海东华大学"/>
+                            <p>上海东华大学</p>
+                        </li>
+                        <li class="list-center">
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture5.jpg" alt="上海工程技术大学 "/>
+                            <p>上海工程技术大学 </p>
+                        </li>
+                        <li>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture6.jpg" alt="温州图书馆"/>
+                            <p>温州图书馆</p>
+                        </li>
+                        <li>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture7.jpg" alt="企业座谈会"/>
+                            <p>企业座谈会</p>
+                           
+                        </li>
+                        <li class="list-center">
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture8.jpg" alt="练塘镇电子商务培训"/>
+                            <p>练塘镇电子商务培训</p>
+                            
+                        </li>
+                        <li>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture9.jpg" alt="公司捐助国内青年创业基金10万元"/>
+                            <p>公司捐助国内青年创业基金10万元</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    <%elseif 3==$sn%>
+        <div class="detail-section honours-section">
+            <div class="section">
+                <ul class="honours-list clear js-honours-list">
+                    <li>
+                        <div>
+                            <h3>创新创业优秀人才团队奖</h3>
+                            <p>荣获上海市青浦区人才<br />工作领导小组颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu1.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>趋势设计奖</h3>
+                            <p>荣获第十六届中国（深圳）<br />国际品牌服饰装饰交易会</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu2.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>高新技术企业证书</h3>
+                            <p>荣获上海科技大学委员会 <br />上海市财务局等颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu3.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>第二届理事会副会长</h3>
+                            <p>陆平一 当选为<br />上海纺织协会第二届理事会副会长</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu4.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>中国服装协会会员单位</h3>
+                            <p>荣获中国服装协会颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu5.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>副会长单位</h3>
+                            <p>荣获上海市青浦区青年创业协会<br />工商联青年创业者联谊会颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu6.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>“双推”创新服务平台</h3>
+                            <p>荣获上海市电子商务颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu7.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>教学实践基地</h3>
+                            <p>长春工业大学艺术设计学院</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu8.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>POP韩国时尚创研中心</h3>
+                            <p>韩中时尚人才开发院&POP<br />（全球）时尚网络机构联合创建</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu9.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>战略合作伙伴</h3>
+                            <p>韩国衣类产业协会&服饰流行前线</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu10.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>战略合作伙伴</h3>
+                            <p> the MICAM shanghai partner of<br />the MICAM shanghai</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu11.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>战略合作伙伴</h3>
+                            <p>上海工程技术大学服装学&<br />POP（全球）时尚网络机构</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu12.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>教学实践基地</h3>
+                            <p>中国美术学院<br />上海设计学院时尚产品设计系</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu13.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>上海现代服务业重点工程</h3>
+                            <p>POP（全球）时尚网络机构</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu14.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>上海设计之都公共服务平台</h3>
+                            <p>POP（全球）时尚网络机构</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu15.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>软件企业认定书</h3>
+                            <p>荣获上海市经济和信息化<br />委员会认定</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu16.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>科学企业资质证书</h3>
+                            <p>荣获上海科技企业联合会颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu17.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>会员单位</h3>
+                            <p>荣获上海市电子商务行业协会颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu18.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>优秀企业</h3>
+                            <p>荣获首届中国创新创业大赛</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu19.jpg" alt="icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>“青之益”入盟证书</h3>
+                            <p>荣获共青团上海市青浦区<br />委员会颁发</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/zhengshu20.jpg" alt="icon">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <%elseif 4==$sn%>
+        <div class="detail-section news-section">
+            <!--媒体报导-->
+            <div class="media-section section">
+                <div class="title-contain">
+                    <div class="title-box">
+                        <strong>媒体报道</strong>
+                    </div>
+                </div>
+                <div class="news-list clear">
+                    <%for $i=0 to 2%>
+                    <a class="<%if $i==1%>list-center<%/if%>" href="/news.php?id=<%$newsList1[$i]['id']%>" title="<%$newsList1[$i]['title']%>">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-news<%$i%>.jpg" alt="企业愿景"/>
+                        <p><%$newsList1[$i]['title']%></p>
+                        <div class="enterprise-msg clear">
+                            <p><%mb_substr($newsList1[$i]['body_show'],0,50)%></p>
+                            <span><%$newsList1[$i]['post_day']%></span>
+                        </div>
+                    </a>
+                    <%/for%>
+                </div>
+                <div class="common-active clear">
+                    <%for $i=3 to 7%>
+                    <a class="clear" href="/news.php?id=<%$newsList1[$i]['id']%>" title="<%$newsList1[$i]['title']%>" ><span><%$newsList1[$i]['post_day']%></span>· &nbsp;<%$newsList1[$i]['title']%></a>
+                    <%/for%>
+                </div>
+                <div class="more-btn-contain">
+                    <a class="more-btn js-more-active" href="/pop_news.php?is_nw=1" title="媒体新闻" >更多</a>
+                </div>
+            </div>
+            <!--公司新闻-->
+            <div class="company-news section clear">
+                <div class="title-contain">
+                    <div class="title-box">
+                        <strong>公司新闻</strong>
+                    </div>
+                </div>
+                <div class="scene-section ">
+
+                    <div class="scene-list">
+                        <div class="common-active clear">
+                            <%for $i=1 to 10%>
+                            <a href="/news.php?id=<%$newsList2[$i]['id']%>" title="<%$newsList2[$i]['title']%>" class="clear"><span><%$newsList2[$i]['post_day']%></span>· &nbsp;<%$newsList2[$i]['title']%></a>
+                            <%/for%>
+
+                        </div>
+                        <div class="more-btn-contain">
+                            <a class="more-btn js-more-active" href="/pop_news.php?is_nw=0" title="公司新闻">更多</a>
+                        </div>
+                    </div>
+                    <div class="scene-msg">
+                        <a href="/news.php?id=<%$newsList2[0]['id']%>" title="<%$newsList2[0]['title']%>">
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-scene.png"/>
+                            <div class="scene-disc clear">
+                                <p><%$newsList2[0]['title']%></p>
+                                <span><%$newsList2[0]['post_day']%></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <%elseif 5==$sn%>
+        <div class="detail-section development">
+            <div class="section">
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2017</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time1.png" />
+                            <span>年中</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2017年中</p> 上海青浦徐泾东，上海国际会展中心旁大体量时尚展厅即将开业，敬请期待。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2016</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span></span>
+                            <img class="time-tagid" style="*margin-left: 33px;" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年底</p>POP全球时尚网络机构已经拥有1.2万家付费的注册会员单位，营销网络遍及全国八大主要服饰产业集群地（广州、杭州、绍兴、桐乡、海宁、石狮、湖州、郑州等），两个海外分中心（土耳其伊斯坦布尔和韩国首尔），为全国近100万设计师和60万服饰企业提供专业、及时、新鲜的趋势资讯服务。<br />优料宝平台，已经覆盖APP、WEB、H5等多种应用入口，平台数据库汇集了百万级的面料样本图片，近3万注册面料商用户。为了让面料商在优料宝平台开展更好地网上业务，我们推出了多种“设计+”和“数字营销+”服务，赢得业内认可和欢迎。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time2.png" />
+                            <span>11月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年11月</p>上海愚园路“设界”展厅开业，致力于更好服务中高端成熟品牌服装市场。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>10月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年10月</p>石狮“设界”展厅开业，致力于更好服务休闲装市场。<br />优料宝与上海纺织集团公司达成战略合作关系，服务于其体系内各个企业采购面料的需求。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>07月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年7月</p>湖州织里“设界”展厅开业，致力于更好服务童装市场</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>06月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年6月</p>杭州九堡“设界”展厅开业，提供线下时尚展示和活动空间，以便更好服务于以杭州为中心辐射的中、少淑女装市场。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time3.png" />
+                            <span>03月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年3月</p>上海徐汇区古美路“设界”展厅开业。<br />为了更好全方位的满足设计师在工作场景下的需求，优料宝——专业的现货面料交易平台web端正式上线。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>01月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2016年1月</p>“设界”模式诞生。设界以“趋势、款式、面料”整体发布落地流行资讯，融合“高端游学、时尚商务培训、VIP沙龙、品牌对接会”等时尚工作和生活项目，整合服饰产业“快反应柔性供应链”，依托线上大数据分析服务，从“采撷灵感、购买原料”到“商业孵化”，给予设计师一条龙落地的立体商业服务，开创了时尚行业线上线下有机融合的服务模式。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2015</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time4.png" />
+                            <span>12月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2015年12月</p>公司正式挂牌上市，股票代码834485。</div>
+                        </div>
+
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>09月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2015年9月</p>优料宝广州分中心成立。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>05月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2015年5月</p>上海逸尚信息咨询有限公司完成股改，正式更名为上海逸尚云联信息技术股份有限公司。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>04月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2015年4月</p>优料宝绍兴分中心成立。</div>
+                        </div>
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time5.png" />
+                            <span>03月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2015年3月</p>应POP全球时尚网络机构广大忠实的设计师用户“快速、精准、方便”购买面料的需求，优料宝APP正式上线。<br />服饰流行前线全面升级改版为“服饰研发必备平台”，以国际视角展示领先国内的前沿趋势设计工作理念。</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2013</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time6.png" />
+                            <span>07月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2013年7月</p>POP全球时尚网络机构与韩国衣类产业协会达成紧密合作，POP韩国时尚创研中心<br />正式在首尔成立，致力于将最前沿的亚洲服饰流行资讯引入中国市场。</div>
+                        </div>
+
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>05月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2013年5月</p>POP全球时尚网络机构与上海纺织协会达成战略合作，成立上海时尚创研中心，致力于服务并推动我国本土时尚产业的发展。</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2011</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time7.png" />
+                            <span>03月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2011年3月</p>“国际家纺设计在线”上线。 “国际首饰设计在线”上线</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2009</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>06月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2009年6月</p>“服饰流行前线”用户总访问量突破6000万人次。</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2008</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>09月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2008年9月</p>“国际箱包设计在线”上线。</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2007</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>12月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2007年12月</p>“国际鞋子设计在线”上线。</div>
+                        </div>
+
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                        	<img class="disc-pic" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/picture-time8.png" />
+                            <span>09月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2007年9月</p>“服饰流行前线”改版升级，内容更加专业和丰富，访问量也随之增加了2倍之多。</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2006</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>05月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2006年5月</p>服饰流行网正式更名为“服饰流行前线”，更新改版后，网站资料增加了3倍多。</div>
+                        </div>
+
+                    </div>
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>01月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2006年1月</p>上海逸尚信息咨询有限公司正式注册成立。</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="years-contain">
+                    <div class="years-hd">
+                        <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Oval-2.png" alt="icon"/>
+                        <div class="hd-msg">
+                            <p>2004</p>
+                            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/btn-bottom.png" alt="icon"/>
+                        </div>
+                    </div>
+
+                    <div class="years-box">
+                        <div class="time-axis"></div>
+                        <div class="development-msg">
+                            <span>12月</span>
+                            <img class="time-tagid" src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Ova-3.png" alt="icon"/>
+                            <div class="development-detail"><img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/Triangle.png" alt="icon" /><p>2004年12月</p>服饰流行网上线，中国国内第一家服装设计流行资讯网站诞生，开启国内服饰设计管理新模式。</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    <%elseif 6==$sn%>
+        <div class="detail-section company-photos">
+            <div class="section">
+            	<ul class="photos-list clear js-photos-list">
+                    <!-- <li>
+                        <a href="pop_album_photo.php?act=photo41" title="查看详情">
+                            <div>
+                                <img class="photo-ele" src="http://img1.p.pop-fashion.com/photo/photo_78.jpg" alt="pic">
+                                <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/icon2.png" alt="icon">
+                            </div>
+                            <h3>2015年POP年会盛典</h3>
+                        </a>
+                    </li> -->
+                </ul>
+                <!-- 分页 -->
+                <div class="page-controller js-page-controller"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="<%$WEB_GLOBAL_JS_URL_NEW%>/global/src/js/about/company-photo.js?version2017/04/13"></script>
+    <%elseif 7==$sn%>
+        <div class="detail-section recruit">
+            <div class="section">
+                <div class="recruit-hd">
+                    <h2>POP团队期待你的加入，让我们一起实现更多梦想！</h2>
+                    <div class="recruit-desc">
+                               在POP，我们的人才策略很简单：我们邀请优秀的人才加盟并鼓励他们实现自己的梦想。<br />
+                        我们推崇专业的技能、时尚的思维、进取的工作、快乐的管理环境、以及背景各异的人才相互沟通激荡出的创造力，<br />
+                        POP的成员中有N年销售总监和资深服装设计师，有专业计算机高手和市场营销达人。<br />
+                        我们相信无论你在POP中国乃至国外哪一个办公地点工作，你的激情和梦想，将会创造出永远超越自我的辉煌。<br />
+                        POP让每一个new poper成为niu（牛）poper！<br />
+                        POP 自2004 年建立了全球第一家中文专业时尚设计资讯平台，也建立了中国时尚设计与资讯管理的新模式！<br />
+                        连续多年被上海市政府评选为“上海IT青年新锐”TOP10，“市科技专项扶持项目”，“上海市科技企业”，“上海市电子商务行业协会会员单位”等。
+                    </div>
+                    <p class="recruit-email">
+                        求职请投递简历至：tuxi@pop136.com <br />
+                        咨询热线：021-64083215
+                    </p>
+                </div>
+                <div class="recruit-section">
+                    <ul class="recruit-select js-recruit-select">
+                        <li class="this-select">全部</li>
+                        <li>市场类</li>
+                        <li>设计类</li>
+                        <li>技术类</li>
+                    </ul>
+                    <div class="recruit-msg">
+                        <ul class="recruit-list">
+                            <li class="bazaar">
+                                <div class="recruit-title">
+                                    <h2>续费专员（上海）</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>市场营销</span></li>
+                                        <li>薪资 : <span class="recruit-salary">7000~10000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>负责公司客户的后期开发，严格按照公司要求进行续费；对续费过程进行记录、分析、跟踪和管理；</span></p>
+                                    <p>3、<span>为客户提供快速、准确与专业的销售服务。</span></p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>负责公司客户的后期开发，严格按照公司要求进行续费；对续费过程进行记录、分析、跟踪和管理；</span></p>
+                                    <p>3、<span>为客户提供快速、准确与专业的销售服务。</span></p>
+                                    <p>1、<span>中专或高中学历以上；</span> </p>
+                                    <p>2、<span>年龄20~28周岁；</span> </p>
+                                </div>
+                            </li>
+                            <li class="bazaar">
+                                <div class="recruit-title">
+                                    <h2>电话营销（上海）</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>市场营销</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8000~12000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>根据公司提供的客户资源，通过电话，网络，的形式向客户推荐我们公司网站，并引导客户找到适合的产品信息；</span></span></p>
+                                    <p>3、<span>达成每月销售目标，保证每天基本工作量；</span></p>
+                                    <p>4、<span>为客户提供快速、准确与专业的销售服务；</span></p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、<span>中专或高中学历以上；</span></p>
+                                    <p>2、<span>年龄20~28周岁； </span></p>
+                                    <p>3、<span>有服饰/箱包/鞋子/首饰等相关销售经验者优先；</span></p>
+                                    <p>4、<span>普通话标准，表达流利；</span></p>
+                                    <p>5、<span>有较强的工作热情和承受销售压力的素质 招聘职位：客服 / 电话回访 </span></p>
+                                </div>
+                            </li>
+                            <li class="bazaar">
+                                <div class="recruit-title">
+                                    <h2>客户代表（上海）</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>市场营销</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8000~12000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>根据公司提供的客户资源，通过电话，网络，的形式向客户推荐我们公司网站，并引导客户找到适合的产品信息；</span></span></p>
+                                    <p>3、<span>达成每月销售目标，保证每天基本工作量；</span></p>
+                                    <p>4、<span>为客户提供快速、准确与专业的销售服务；</span></p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、<span>中专或高中学历以上；</span></p>
+                                    <p>2、<span>年龄20~28周岁； </span></p>
+                                    <p>3、<span>有服饰/箱包/鞋子/首饰等相关销售经验者优先；</span></p>
+                                    <p>4、<span>普通话标准，表达流利；</span></p>
+                                    <p>5、<span>有较强的工作热情和承受销售压力的素质 招聘职位：客服 / 电话回访 </span></p>
+                                </div>
+                            </li>
+                            <li class="bazaar">
+                                <div class="recruit-title">
+                                    <h2>客户代表（广州区域）</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>广州</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>市场营销</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8000~12000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>根据公司提供的客户资源，通过电话，网络，的形式向客户推荐我们公司网站，并引导客户找到适合的产品信息；</span></span></p>
+                                    <p>3、<span>达成每月销售目标，保证每天基本工作量；</span></p>
+                                    <p>4、<span>为客户提供快速、准确与专业的销售服务；</span></p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、<span>中专或高中学历以上；</span></p>
+                                    <p>2、<span>年龄20~28周岁； </span></p>
+                                    <p>3、<span>有服饰/箱包/鞋子/首饰等相关销售经验者优先；</span></p>
+                                    <p>4、<span>普通话标准，表达流利；</span></p>
+                                    <p>5、<span>有较强的工作热情和承受销售压力的素质 招聘职位：客服 / 电话回访 </span></p>
+                                </div>
+                            </li>
+                            <li class="bazaar">
+                                <div class="recruit-title">
+                                    <h2>客户代表（杭州）</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>杭州</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>市场营销</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8000~12000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>根据公司提供的客户资源，通过电话，网络，的形式向客户推荐我们公司网站，并引导客户找到适合的产品信息；</span></span></p>
+                                    <p>3、<span>达成每月销售目标，保证每天基本工作量；</span></p>
+                                    <p>4、<span>为客户提供快速、准确与专业的销售服务；</span></p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、<span>中专或高中学历以上；</span></p>
+                                    <p>2、<span>年龄20~28周岁； </span></p>
+                                    <p>3、<span>有服饰/箱包/鞋子/首饰等相关销售经验者优先；</span></p>
+                                    <p>4、<span>普通话标准，表达流利；</span></p>
+                                    <p>5、<span>有较强的工作热情和承受销售压力的素质 招聘职位：客服 / 电话回访 </span></p>
+                                </div>
+                            </li>
+                            <li class="bazaar">
+                                <div class="recruit-title">
+                                    <h2>客户代表（嘉兴）</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>嘉兴</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>市场营销</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8000~12000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、<span>根据公司提供的国际/国内流行信息，了解服饰/箱包/鞋子/首饰设计、款式、流行元素等行业信息；</span></p>
+                                    <p>2、<span>根据公司提供的客户资源，通过电话，网络，的形式向客户推荐我们公司网站，并引导客户找到适合的产品信息；</span></span></p>
+                                    <p>3、<span>达成每月销售目标，保证每天基本工作量；</span></p>
+                                    <p>4、<span>为客户提供快速、准确与专业的销售服务；</span></p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、<span>中专或高中学历以上；</span></p>
+                                    <p>2、<span>年龄20~28周岁； </span></p>
+                                    <p>3、<span>有服饰/箱包/鞋子/首饰等相关销售经验者优先；</span></p>
+                                    <p>4、<span>普通话标准，表达流利；</span></p>
+                                    <p>5、<span>有较强的工作热情和承受销售压力的素质 招聘职位：客服 / 电话回访 </span></p>
+                                </div>
+                            </li>
+                            <li class="design">
+                                <div class="recruit-title">
+                                    <h2>女装设计师/助理</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>设计</span></li>
+                                        <li>薪资 : <span class="recruit-salary">4000-7000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1.负责女装趋势研究的相关工作。</p>
+                                    <p>2.负责淘品牌女装的分析和研究工作。</p>
+                                    <p>3.负责相关出版物产品的培训和推广。</p>
+                                    <p>4.参与POP大讲堂和面料对接会的工作。</p>
+                                    <p>5.根据部门工作需要，完成部门主管布置的其他临时性工作。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、服装相关专业本科以上学历；</p>
+                                    <p>2、1~3年相关行业女装类产品规划和设计从业经验；</p>
+                                    <p><i>3、</i><span>具备较强的计算机绘图和手绘能力，能熟练使用Photoshop、CAD、Illustrator、CorelDRAW等绘图软件；</span></p>
+                                    <p>4、了解流行趋势，有较强的时尚嗅觉，具备敏锐的市场洞察力和信息分析能力；</p>
+                                    <p>5、扎实的文字功底和编辑能力；</p>
+                                    <p><i>6、</i><span>较好的策划、组织、沟通协调能力，具备优秀的表述能力，能够很好地完成各种形式的专业推广文案。</span></p>
+                                </div>
+                            </li>
+                            <li class="design">
+                                <div class="recruit-title">
+                                    <h2>男装设计师/助理</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>设计</span></li>
+                                        <li>薪资 : <span class="recruit-salary">4000-7000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1.负责男装趋势研究的相关工作。</p>
+                                    <p>2.负责淘品牌男装的分析和研究工作。</p>
+                                    <p>3.负责相关出版物产品的培训和推广。</p>
+                                    <p>4.参与POP大讲堂和面料对接会的工作。</p>
+                                    <p>5.根据部门工作需要，完成部门主管布置的其他临时性工作。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、服装相关专业本科以上学历；</p>
+                                    <p>2、1~3年相关行业男装类产品规划和设计从业经验；</p>
+                                    <p><i>3、</i><span>具备较强的计算机绘图和手绘能力，能熟练使用Photoshop、CAD、Illustrator、CorelDRAW等绘图软件；</span></p>
+                                    <p>4、了解流行趋势，有较强的时尚嗅觉，具备敏锐的市场洞察力和信息分析能力；</p>
+                                    <p>5、扎实的文字功底和编辑能力；</p>
+                                    <p><i>6、</i><span>较好的策划、组织、沟通协调能力，具备优秀的表述能力，能够很好地完成各种形式的专业推广文案。</span></p>
+                                </div>
+                            </li>
+                            <li class="design">
+                                <div class="recruit-title">
+                                    <h2>童装设计师/助理</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>设计</span></li>
+                                        <li>薪资 : <span class="recruit-salary">4000-7000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1.负责童装趋势研究的相关工作。</p>
+                                    <p>2.负责淘品牌童装的分析和研究工作。</p>
+                                    <p>3.负责相关出版物产品的培训和推广。</p>
+                                    <p>4.参与POP大讲堂和面料对接会的工作。</p>
+                                    <p>5.根据部门工作需要，完成部门主管布置的其他临时性工作。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、服装相关专业本科以上学历；</p>
+                                    <p>2、1~3年相关行业童装类产品规划和设计从业经验；</p>
+                                    <p><i>3、</i><span>具备较强的计算机绘图和手绘能力，能熟练使用Photoshop、CAD、Illustrator、CorelDRAW等绘图软件；</span></p>
+                                    <p>4、了解流行趋势，有较强的时尚嗅觉，具备敏锐的市场洞察力和信息分析能力；</p>
+                                    <p>5、扎实的文字功底和编辑能力；</p>
+                                    <p><i>6、</i><span>较好的策划、组织、沟通协调能力，具备优秀的表述能力，能够很好地完成各种形式的专业推广文案。</span></p>
+                                </div>
+                            </li>
+                            <li class="design">
+                                <div class="recruit-title">
+                                    <h2>鞋子、箱包设计师/助理</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>设计</span></li>
+                                        <li>薪资 : <span class="recruit-salary">4000-7000</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1.负责鞋子、箱包趋势研究的相关工作。</p>
+                                    <p>2.负责淘品牌的分析和研究工作。</p>
+                                    <p>3.负责相关出版物产品的培训和推广。</p>
+                                    <p>4.参与POP大讲堂的工作。</p>
+                                    <p>5.根据部门工作需要，完成部门主管布置的其他临时性工作。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、艺术设计相关专业专科以上学历；</p>
+                                    <p>2、1~3年相关行业男装类产品规划和设计从业经验；</p>
+                                    <p><i>3、</i><span>具备较强的计算机绘图和手绘能力，能熟练使用Photoshop、CAD、Illustrator、CorelDRAW等绘图软件；</span></p>
+                                    <p>4、了解流行趋势，有较强的时尚嗅觉，具备敏锐的市场洞察力和信息分析能力；</p>
+                                    <p>5、扎实的文字功底和编辑能力；</p>
+                                    <p><i>6、</i><span>较好的策划、组织、沟通协调能力，具备优秀的表述能力，能够很好地完成各种形式的专业推广文案。</span></p>
+                                    <p>7、具备较强的抗压能力，以及良好的沟通、组织与协调能力。</p>
+                                </div>
+                            </li>
+                            <li class="technology">
+                                <div class="recruit-title">
+                                    <h2>测试工程师</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>技术类</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8K-15K</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1、服从上级分配的任务，保质、保量、按时完成所负责的测试任务；</p>
+                                    <p>2、根据需求与小组成员一起进行测试需求分析、设计测试用例并保证对需求的覆盖；</p>
+                                    <p>3、制定测试计划，构建测试环境，设计测试脚本和用例，执行测试脚本和测试用例；</p>
+                                    <p>4、分析问题所在并进行准确定位和验证，按照标准格式填写并提交Bug报告。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、计算机或相关专业，全日制重点高校专科及以上学历； </p>
+                                    <p><i>2、</i><span>熟练运用主流的测试管理工具，掌握黑盒测试方法、了解白盒测试技术，有较强的逻辑分析能力；</span></p>
+                                    <p>3、三年以上网站测试经验；</p>
+                                    <p>4、具有大型网站或系统测试经验者优先，具备良好的团队协作/沟通能力/责任心，工作细致；</p>
+                                    <p>5、有开发经验者优先；有手机端(iphone，android)应用测试经验的优先考虑。</p>
+                                </div>
+                            </li>
+                            <li class="technology">
+                                <div class="recruit-title">
+                                    <h2>JAVA开发工程师</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>技术类</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8K-15K</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1. 根据项目需求，设计和实现APP和网站的服务器模块开发</p>
+                                    <p>2. 能独立完成编程和单元测试工作。</p>
+                                    <p>3. 编写对应产品的设计开发文档。</p>
+                                    <p><i>4.</i> <span>熟悉mysql 关系型数据库并且有一定调优经验，了解redis和mogodb非关系型数据库</span></p>
+                                    <p>5. 参与需求分析并为项目经理提供专业的技术建议。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1、三年以上的java开发经验。 </p>
+                                    <p>2、精通Java语言，Java基础扎实，熟悉IO、多线程、集合等基础框架，Solr全文搜索；</p>
+                                    <p>3、精通SpringMVC、Mybatis、hadoop 等主流分布式框架；</p>
+                                    <p><i>4、</i><span>熟悉 mysql、oracle等关系型数据库、有数据库调优经验，熟悉 redis、mongodb 等非关系型数据库；要求实际搭建和操作过，不是只是知道理论，不会做或没有实际做过的勿扰</span></p>
+                                    <p>5、熟悉Linux开发环境，熟练配置维护Nginx/Tomcat/JBOSS等服务，掌握shell脚本工具；</p>
+                                    <p>6、熟悉Html5/CSS3，JavaScript/Ajax,JQuery等前端技术</p>
+                                </div>
+                            </li>
+                            <li class="technology">
+                                <div class="recruit-title">
+                                    <h2>php开发工程师</h2>
+                                    <ul class="title-detail">
+                                        <li>工作地点：<span>上海</span></li>
+                                        <li>招聘人数：<span>若干</span></li>
+                                        <li>职位类别：<span>技术类</span></li>
+                                        <li>薪资 : <span class="recruit-salary">8K-15K</span></li>
+                                    </ul>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作职责：</h3>
+                                    <p>1. 负责公司旗下相关网站及内部信息平台的开发和维护工作。</p>
+                                    <p>2. 参与公司内部项目的技术设计并撰写相关文档。</p>
+                                    <p>3. 完成上级领导安排其他工作事项。</p>
+                                </div>
+                                <div class="recruit-duty">
+                                    <h3>工作要求：</h3>
+                                    <p>1. 大专以上相关学历。 </p>
+                                    <p>2. 大中型互联网企业2年以上PHP开发经验或其他行业同等工作经验。</p>
+                                    <p>3. 熟悉PHP面向对象的设计方法，有良好的代码编程习惯。</p>
+                                    <p><i>4. </i><span>精通MySQL数据库，熟悉各种sql语句操作，能独立设计合理高效的表结构，有数据库优化经验者优先。</span></p>
+                                    <p>5. 熟悉HTML、Javascript、XML、CSS、Ajax等技术。</p>
+                                    <p>6. 思维敏捷，编程和学习能力强。</p>
+                                    <p>7. 具有很强逻辑分析能力和良好的理解沟通能力，有很强的团队意识和责任心。</p>
+                                    <p>8. 有NoSQL数据库经验优先，熟悉linux系统优先。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            require(["jquery"],function(){
+                $(function(){
+                    var ul_list = $(".recruit-select>li");
+                    ul_list.click(function () {
+                        var index = $(this).index();
+                        $(this).addClass("this-select").siblings().removeClass("this-select");
+                        var cate = '';
+                        switch (index) {
+                            case 1:
+                                cate = 'bazaar';
+                                break;
+                            case 2:
+                                cate = 'design';
+                                break;
+                            case 3:
+                                cate = 'technology';
+                                break;
+                            default:
+                                break;
+                        }
+                        if (index == 0) {
+                            $("ul.recruit-list>li").show();
+                        } else {
+                            $("ul.recruit-list>li").hide();
+                            $("ul.recruit-list>li." + cate).show();
+                        }
+                    });
+                });
+
+            });
+        </script>
+    <%elseif 8==$sn%>
+    888888
+    <%/if%>
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+    <a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+            <p>常见问题</p>
+        </div>
+    </a>
+    <a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+        </div>
+    </a>
+</div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    require(["jquery"],function(jquery){
+        $(function(){
+            // 去掉右边距
+            $(".js-honours-list>li").each(function(i){
+                if((i+1)%4==0){
+                    $(this).css({"margin-right":0});
+                }
+            });
+            //返回顶部按钮
+            var right_box_ele=$(".js-right-box");
+            $(".js-top-btn").on("click",function(e){
+                $("html,body").animate({"scrollTop":0},500);
+            });
+            // 滚动监听
+            setRightFunc($(window).scrollTop());
+            $(window).on("scroll",function(){
+                var nscroll_y=$(this).scrollTop();
+                setRightFunc(nscroll_y);
+            });
+            function setRightFunc(y){
+                if(y>0){
+                    right_box_ele.show();
+                }else{
+                    right_box_ele.hide();
+                }
+            };
+        });
+    });
+</script>
+<%/block%>

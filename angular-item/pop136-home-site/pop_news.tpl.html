@@ -1,0 +1,144 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+	<link rel="stylesheet" type="text/css" href="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/css/about/news.css?version=2017/03/16"/>
+	<style type="text/css">
+		.layui-box{text-align: center;font-size: 14px;color: #666666;padding-top: 80px;}
+		.layui-box>a{color: #666666;background: #F0F2F4;height: 30px;width: 30px;line-height: 30px;display: inline-block;border: 1px solid #FFFFFF; *display: inline;*zoom: 1;margin: 0 5px;}
+		.layui-box>a:hover{background-color: #FB3352;color: #fff}
+		.layui-box>.layui-laypage-prev,.layui-box>.laypage_first,.layui-box>.layui-laypage-last,.layui-box>.layui-laypage-next{width: 70px;border: 1px solid #FFFFFF;}
+		.layui-box>.layui-laypage-curr{margin: 0 5px;height: 30px;line-height: 30px;width: 30px;border: 1px solid #FB3352;background: #FB3352;*display: inline;*zoom: 1;display: inline-block;color: #FFFFFF;}
+		.layui-laypage-total{margin-left: 20px;}
+        .layui-laypage-total>.layui-laypage-skip{ width: 50px;height: 30px;border: 1px solid #EBEDEF;padding: 0 5px;outline: none;margin: 0 10px 0 5px;color: #81838B;}
+		.layui-laypage-total>.layui-laypage-btn{display: inline-block;*display: inline;*zoom: 1;background: #FB3352;width: 70px;height: 30px;line-height: 30px;margin-left: 10px;color: #fff;}
+		.layui-laypage-total>.layui-laypage-btn:hover{background: #e60c2e;}
+	</style>
+		
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+	
+	<div class="media-page common-page">
+		<div class="section">
+			<div class="nav-links">
+				<a href="http://www.pop136.com/" title="首页" target="_self">首页</a>
+				<img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+				<a href="/aboutpop.php?sn=4" title="新闻报导" target="_self">新闻报导</a>
+				<img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+				<span class="current-link"><%if $is_nw%>媒体新闻<%else%>公司新闻<%/if%></span>
+			</div>
+			<div class="title-contain">
+				<div class="title-box">
+	                <strong><%if $is_nw%>媒体新闻<%else%>公司新闻<%/if%></strong>
+	            </div>
+			</div>
+			<!--新闻列表-->
+			<div>
+				<div class="common-active clear">
+					<%foreach $newsList as $news%>
+		        	<a class="clear" href="/news.php?id=<%$news.id%>" title="<%$news.title%>" ><span><%$news.post_day%></span>· &nbsp;<%$news.title%></a>
+		        	<%/foreach%>
+				</div>
+			</div>
+			
+			<!--<ul class="list-navs">
+				<li class="list-start">首页</li>
+				<li class="list-num">1</li>
+				<li class="list-num">2</li>
+				<li class="list-num">3</li>
+				<li class="list-next">下一页</li>
+				<li class="list-end">尾页</li>
+			</ul>-->
+			<!-- 分页 -->
+    		<div class="page-controller js-page-controller"></div>
+		</div>
+		
+	</div>
+	
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+	<a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+		<div class="back-box"></div>
+		<div class="msg-contain">
+			<img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+			<p>常见问题</p>
+		</div>
+	</a>
+	<a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+		<div class="back-box"></div>
+		<div class="msg-contain">
+			<img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+		</div>
+	</a>
+</div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    require(["jquery"],function(jquery){
+        $(function(){
+            //返回顶部按钮
+            var right_box_ele=$(".js-right-box");
+            $(".js-top-btn").on("click",function(e){
+                $("html,body").animate({"scrollTop":0},500);
+            });
+            // 滚动监听
+            setRightFunc($(window).scrollTop());
+            $(window).on("scroll",function(){
+                var nscroll_y=$(this).scrollTop();
+                setRightFunc(nscroll_y);
+            });
+            function setRightFunc(y){
+                if(y>0){
+                    right_box_ele.show();
+                }else{
+                    right_box_ele.hide();
+                }
+            };
+        });
+    });
+    
+    require.config({
+        paths:{
+            "laypage":["lib/laypage"]
+        },
+        shim:{
+            "laypage":{
+                exports:"laypage"
+            }
+        }
+    });
+    // 分页
+    require(["laypage","jquery"],function(laypage){
+        $(function(){
+			var current_href = window.location.href;
+			var current_pos = current_href.split("#")[1] ? current_href.split("#")[1] : "";
+			var current_page = '<%$page%>';
+			var base_url = 'http://www.pop136.com/';
+			var list_url = base_url + 'pop_news.php?is_nw=<%$is_nw%>';
+            laypage({
+                cont:$(".js-page-controller"),
+                pages:'<%$pages%>',
+                curr:current_page,
+                groups:5,
+                skin:"#f40",
+                first:"首页",
+                last:"尾页",
+                prev:"上一页",
+                next:"下一页",
+                skip:true, // 是否显示按页码跳转
+                hash:"",
+                jump:function(obj, first){
+                    //得到了当前页，用于向服务端请求对应数据
+					var curr = obj.curr;
+					if (!first) {
+						location.href = list_url + '&page=' + curr;
+					}
+                }
+            });
+        });
+    });
+</script>
+<%/block%>

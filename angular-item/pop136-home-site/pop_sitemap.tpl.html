@@ -1,0 +1,121 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+    <style type="text/css">
+        /*小导航*/
+        .nav-links{line-height: 22px; font-size: 16px;padding:50px 0 30px;}
+        .nav-links>a{color: #333333;}
+        .nav-links>img{width: 8px;vertical-align: middle;}
+        .nav-links>.current-link{color: #FB3352;}
+        .nav-links>a:hover{color: #FB3352;}
+        /*右侧*/
+        .link-btns{display: none;position: fixed;right: 20px;bottom: 50px;z-index: 100;overflow: hidden;}
+        .link-btns>a{display: block;width: 80px;height: 80px;margin-bottom: 2px;position: relative;z-index: 7;color: #FAFAFA;cursor: pointer;}
+        .link-btns>a>.back-box{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: #000000;opacity: 0.5;filter: alpha(opacity=50);z-index: 8;}
+        .link-btns>a>.msg-contain{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;padding-top: 10px;text-align: center;}
+        .link-btns .msg-contain>p{padding-top: 6px;}
+        .link-btns .normal-btn p{font-size: 14px;}
+        .link-btns .normal-btn img{width: 26px;margin-top: 5px;}
+        .link-btns .top-btn img{width: 33px;margin-top: 10px;}
+
+        .map-section>h3{font-size: 36px;margin-bottom: 50px;color: #333;text-align: center;}
+        .map-section>h3>span{display: inline-block;*display: inline-block;width: 20px;height: 2px;margin: 0 12px;background-color: #333;vertical-align: middle;}
+        .map-list>li{margin-bottom: 50px;}
+        .map-list>li>label{display: inline-block;*display: inline-block;font-size: 16px;margin-right: 30px;font-weight: 600;vertical-align: middle;}
+        .map-list>li>a{display: inline-block;*display: inline-block;font-size: 14px;padding: 0px 20px;color: #333;border-right: 1px solid #333;vertical-align: middle;}
+        .map-list>li>a:hover{color: #FB3352;}
+    </style>
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+    <div class="section map-section">
+        <div class="nav-links">
+            <a href="http://www.pop136.com/" title="首页" target="_self">首页</a>
+            <img src="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/images/about/nav-btn.png" alt="icon"/>
+            <span class="current-link">网站地图</span>
+        </div>
+        <h3><span></span>网站地图<span></span></h3>
+        <ul class="map-list">
+            <li>
+                <label>产品服务</label>
+                <a href="http://www.pop136.com/product_service.php#seeTxT" title="设计资讯">设计资讯</a>
+                <a href="http://www.pop136.com/product_service.php#thinkTxT" title="潮流预测">潮流预测</a>
+                <a href="http://www.pop136.com/product_service.php#doTxT" title="设计素材">设计素材</a>
+                <a href="http://www.uliaobao.com/" title="面料采购">面料采购</a>
+                <a href="http://www.pop136.com/product_service.php#designTxT" title="线下活动">线下活动</a>
+                <a class="nborder-r" href="http://www.pop136.com/pop_exe.php" title="pop客户端下载">pop客户端下载</a>
+            </li>
+            <li>
+                <label>合作伙伴</label>
+                <a href="http://www.pop136.com/partner.php?sn=1" title="客户列表">客户列表</a>
+                <a href="http://www.pop136.com/partner.php?sn=1#1" title="服饰行业">服饰行业</a>
+                <a href="http://www.pop136.com/partner.php?sn=1#2" title="箱包行业">箱包行业</a>
+                <a href="http://www.pop136.com/partner.php?sn=1#3" title="鞋子行业">鞋子行业</a>
+                <a href="http://www.pop136.com/partner.php?sn=1#4" title="家纺行业">家纺行业</a>
+                <a href="http://www.pop136.com/partner.php?sn=1#5" title="首饰行业">首饰行业</a>
+                <a class="nborder-r" href="http://www.pop136.com/partner.php?sn=2" title="服务故事">服务故事</a>
+            </li>
+            <li>
+                <label>关于我们</label>
+                <a href="http://www.pop136.com/aboutpop.php?sn=1" title="POP简介">POP简介</a>
+                <a href="http://www.pop136.com/aboutpop.php?sn=2" title="企业文化">企业文化</a>
+                <a href="http://www.pop136.com/aboutpop.php?sn=3" title="企业荣誉">企业荣誉</a>
+                <a href="http://www.pop136.com/aboutpop.php?sn=4" title="新闻报道">新闻报道</a>
+                <a href="http://www.pop136.com/aboutpop.php?sn=5" title="发展历程">发展历程</a>
+                <a href="http://www.pop136.com/aboutpop.php?sn=6" title="企业相册">企业相册</a>
+                <a class="nborder-r" href="http://www.pop136.com/aboutpop.php?sn=7" title="招贤纳士">招贤纳士</a>
+            </li>
+            <li>
+                <label>联系我们</label>
+                <a href="http://www.pop136.com/contactpop.php?sn=1" title="服务网点">服务网点</a>
+                <a href="http://www.pop136.com/contactpop.php?sn=2" title="商务合作">商务合作</a>
+                <a class="nborder-r" href="http://www.pop136.com/contactpop.php?sn=3" title="广告中心 ">广告中心 </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+    <a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+            <p>常见问题</p>
+        </div>
+    </a>
+    <a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+        </div>
+    </a>
+</div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    require(["jquery"],function(jquery){
+        $(function(){
+            //返回顶部按钮
+            var right_box_ele=$(".js-right-box");
+            $(".js-top-btn").on("click",function(e){
+                $("html,body").animate({"scrollTop":0},500);
+            });
+            // 滚动监听
+            setRightFunc($(window).scrollTop());
+            $(window).on("scroll",function(){
+                var nscroll_y=$(this).scrollTop();
+                setRightFunc(nscroll_y);
+            });
+            function setRightFunc(y){
+                if(y>0){
+                    right_box_ele.show();
+                }else{
+                    right_box_ele.hide();
+                }
+            };
+        });
+    });
+</script>
+<%/block%>

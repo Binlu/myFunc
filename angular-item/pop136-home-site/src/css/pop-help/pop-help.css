@@ -1,0 +1,57 @@
+/*
+	#author		shuzhan
+	#date 		2017/04/07
+*/
+
+/* banner */
+.top-bg{position: relative;}
+.top-bg>img{width: 100%;vertical-align: middle;}
+.top-msg{z-index: 9;position: absolute;left: 0;top: 0;width: 100%;text-align: center;color: #FFFFFF;padding-top: 50px;}
+.top-msg>h2{font-size: 42px;line-height: 60px;}
+.top-msg>p{font-size: 32px;line-height: 46px;}
+.top-msg>.tel-mag{margin-top: 26px; font-size: 28px;color: #FB3352;background: #FFFFFF;border-radius: 25px;padding: 0 40px;display: inline-block;*display: inline;*zoom: 1;height: 50px;line-height: 50px;}
+.top-msg>.tel-mag>img{width: 36px;vertical-align: -6px;margin-right: 10px;}
+
+/*侧边栏按钮*/
+.link-btns{display: none;position: fixed;right: 20px;bottom: 50px;z-index: 100;overflow: hidden;}
+.link-btns>a{display: block;width: 80px;height: 80px;margin-bottom: 2px;position: relative;z-index: 7;color: #FAFAFA;cursor: pointer;}
+.link-btns>a>.back-box{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: #000000;opacity: 0.5;filter: alpha(opacity=50);z-index: 8;}
+.link-btns>a>.msg-contain{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;padding-top: 10px;text-align: center;}
+.link-btns .msg-contain>p{padding-top: 6px;}
+.link-btns .normal-btn p{font-size: 14px;}
+.link-btns .normal-btn img{width: 26px;margin-top: 5px;}
+.link-btns .top-btn img{width: 33px;margin-top: 10px;}
+
+.nav-links {line-height: 22px;font-size: 16px;padding: 35px 0 96px;}
+.nav-links>a {color: #333333;}
+.nav-links>img {width: 8px;vertical-align: middle;}
+.nav-links>.current-link {color: #FB3352;}
+
+@media only screen and (max-width: 1400px) and (min-width: 1200px){
+    .top-msg>h2{font-size: 38px;line-height: 50px;}
+	.top-msg>p{font-size: 28px;line-height: 40px;}
+}
+@media only screen and (max-width: 1200px) {
+	.top-msg{padding-top: 30px;}
+	.top-msg>h2{font-size: 36px;line-height: 46px;}
+	.top-msg>p{font-size: 24px;line-height: 36px;}
+	.top-msg>.tel-mag{font-size: 24px;border-radius: 20px;height: 40px;line-height: 40px;margin-top: 20px;}
+	.top-msg>.tel-mag>img{width: 32px;}
+
+}
+
+/*左边模块*/
+.help-left{float:left;width: 32%;border-right: 1px solid #DFE0E3;}
+.help-left h3{font-size: 16px;color: #333333;font-weight: bold;line-height: 22px;padding-bottom: 8px;}
+.help-left ul a{display: block;color: #333333;font-size: 14px;padding: 11px 12px 11px 0;}
+.help-left ul a:hover,.help-left ul .this-item{color: #FB3352;}
+.help-left>.ab-login,.help-left>.ab-imgs{margin-bottom: 40px;}
+
+
+/*右边内容页*/
+.content-section{float:left;width: 67%;}
+.content-section>.content-box{padding-left: 30px;font-size: 14px;}
+.content-section>.content-box>h3{font-size: 14px;padding: 10px 0 20px;border-bottom: 1px solid #DFE0E3;margin-bottom: 20px;}
+
+
+

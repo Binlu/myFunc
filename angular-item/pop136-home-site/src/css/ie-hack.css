@@ -1,0 +1,32 @@
+/*
+	#author		lut000
+	#date 		2017/03/03
+*/
+@charset "utf-8";
+
+/*1200/2000*/
+.section{margin: auto;}
+/*header*/
+.header{margin: auto;}
+.nav-list>li{*zoom:1;*display: inline;}
+.fixed-nav-section{height: 61px;display: none;opacity: 1;filter:alpha(opacity=100);}
+.show-nav{
+	height: 61px;
+	display: block;
+}
+.fixed-nav-section .sub-div>span{bottom: -1px}
+/*content*/
+
+.register-box>.section{padding: 20px 0px}
+.type-div{margin: 20px auto 30px;}
+.register-div>form>label{margin-bottom: 22px;}
+.register-div>form input[type="text"], .register-div>form input[type="password"]{margin-bottom: 20px;}
+.txt-div>ul{margin-bottom: 60px;}
+.txt-div>ul>li{padding: 10px 0}
+/*.content{width: 1200px;}*/
+/*common*/
+/*头部下拉框*/
+.down-list{ top: 60px;*top: 59px;}
+.down-div{top:140px;}
+.fixed-nav-section .down-div{top: 59px;border:1px solid #ececec;border-top: 1px solid #151515;}
+.fixed-nav-section .down-list{border:1px solid #ececec;border-top: 1px solid #151515;}

@@ -1,0 +1,60 @@
+<%extends file="layout.tpl.html"%>
+<%block name="selfcss"%>
+<link rel="stylesheet" type="text/css" href="<%$WEB_GLOBAL_CSS_URL_NEW%>/global/src/css/xxx.css"/>
+<%/block%>
+<%block name="main"%>
+<!-- content -->
+<div class="content">
+	
+</div>
+<!-- contents -->
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+    <a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/issue.png" alt="问题" />
+            <p>常见问题</p>
+        </div>
+    </a>
+    <a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="<%$WEB_GLOBAL_IMG_URL_NEW%>/global/src/images/service/go-top.png" alt="top" />
+        </div>
+    </a>
+</div>
+<%/block%>
+<%block name="self"%>
+<script type="text/javascript">
+    require(["jquery"],function(jquery){
+        $(function(){
+            // 去掉右边距
+            $(".js-honours-list>li").each(function(i){
+                if((i+1)%4==0){
+                    $(this).css({"margin-right":0});
+                }
+            });
+            //返回顶部按钮
+            var right_box_ele=$(".js-right-box");
+            $(".js-top-btn").on("click",function(e){
+                $("html,body").animate({"scrollTop":0},500);
+            });
+            // 滚动监听
+            setRightFunc($(window).scrollTop());
+            $(window).on("scroll",function(){
+                var nscroll_y=$(this).scrollTop();
+                setRightFunc(nscroll_y);
+            });
+            function setRightFunc(y){
+                if(y>0){
+                    right_box_ele.show();
+                }else{
+                    right_box_ele.hide();
+                }
+            };
+        });
+    });
+</script>
+<%/block%>

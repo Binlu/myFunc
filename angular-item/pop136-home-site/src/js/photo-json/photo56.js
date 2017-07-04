@@ -1,0 +1,11 @@
+define(function(){
+	return [{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d1.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x1.jpg","title":"\u7b2c\u5341\u516b\u5c4a\u5927\u8bb2\u5802\u5e7f\u5dde\u7bb1\u5305\u7ad9"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d2.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x2.jpg","title":"\u6d3b\u52a8\u524d\u5de5\u4f5c\u4eba\u5458\u7684\u5728\u51c6\u5907"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d3.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x3.jpg","title":"\u6765\u5bbe\u7b7e\u5230\u5904"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d4.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x4.jpg","title":"POP\u9ad8\u7aef\u4e66\u7c4d\u5c55\u793a"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d5.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x5.jpg","title":"\u4e13\u6ce8\u9605\u8bfb"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d6.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x6.jpg","title":"\u4f1a\u573a\u5ea7\u65e0\u865a\u5e2d"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d7.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x7.jpg","title":"POP\u526f\u603b\u88c1\u4faf\u5fd7\u594e\u5148\u751f\u4eb2\u4e34\u73b0\u573a"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d8.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x8.jpg","title":"POP\u4ea7\u54c1\u4e2d\u5fc3\u7bb1\u5305\u7ecf\u7406\u5b59\u6885\u83b9"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d9.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x9.jpg","title":"\u5927\u8bb2\u5802\u73b0\u573a"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d10.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x10.jpg","title":"\u5927\u8bb2\u5802\u5185\u5bb9\uff0c\u6293\u7d27\u8bb0\u5f55"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d11.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x11.jpg","title":"\u8bb2\u5802\u73b0\u5728\u4eba\u6c14\u7206\u68da"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/d12.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h56\/x12.jpg","title":"\u4f1a\u540e\u5355\u72ec\u8ba8\u8bba\u89e3\u8bfb"}]
+
+});
+
+
+
+
+
+
+

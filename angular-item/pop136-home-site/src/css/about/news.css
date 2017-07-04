@@ -1,0 +1,48 @@
+/*
+    #author     shuzhan
+    #date       2017/03/23
+*/
+
+.common-page{padding-bottom: 65px;}
+/*侧边栏按钮*/
+.link-btns{display: none;position: fixed;right: 20px;bottom: 50px;z-index: 100;overflow: hidden;}
+.link-btns>a{display: block;width: 80px;height: 80px;margin-bottom: 2px;position: relative;z-index: 7;color: #FAFAFA;cursor: pointer;}
+.link-btns>a>.back-box{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: #000000;opacity: 0.5;filter: alpha(opacity=50);z-index: 8;}
+.link-btns>a>.msg-contain{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;padding-top: 10px;text-align: center;}
+.link-btns .msg-contain>p{padding-top: 6px;}
+.link-btns .normal-btn p{font-size: 14px;}
+.link-btns .normal-btn img{width: 26px;margin-top: 5px;}
+.link-btns .top-btn img{width: 33px;margin-top: 10px;}
+
+/*导航栏*/
+.nav-links{line-height: 22px; font-size: 16px;padding:50px 0 30px;}
+.nav-links>a{color: #333333;}
+.nav-links>img{width: 8px;vertical-align: middle;}
+.nav-links>.current-link{color: #FB3352;}
+.nav-links>a:hover{color: #FB3352;}
+
+.title-contain{text-align: center;}
+.title-box{position: relative; display:inline-block; *display: inline; *zoom:1; padding: 0 20px; height: 30px; border-bottom: 2px solid #333; margin: 0 auto;text-align: center;*margin-bottom: 10px; }
+.title-box>strong{font-size: 36px;color: #333333;vertical-align: middle; padding: 0 20px;height: 50px; line-height: 50px;*height: 60px;*line-height: 60px; background: white;display:inline-block; *display: inline; *zoom:1; font-weight: normal; }
+
+.common-active{border-bottom: 1px solid #F0F2F4;font-size: 14px;padding: 48px 0 20px 0;}
+.common-active>a{padding:10px 0;color: #333333;display: block;line-height: 20px;}
+.common-active>a:hover,.common-active>a:hover span{color: #FB3352;}
+.common-active>a>span{float: right;color: #C3C3C3;}
+/*.common-active>a:hover,.common-active>a:hover span{color: #FB3352;}*/
+
+
+/*新闻详情页*/
+.media-detail{color: #333333;}
+.media-detail .title-hd{font-size: 24px;color: #333333;padding: 18px 0 60px;text-align: center;}
+.media-detail .media-msg{font-size: 14px;line-height: 30px;}
+.media-detail .media-msg img{width: 600px;display: block;margin: 16px auto 0 auto;}
+.media-detail .media-msg p{text-indent: 28px;}
+.media-detail .media-item{padding-bottom: 36px;}
+.media-detail .media-item>p{padding-bottom: 32px;}
+
+
+
+
+
+

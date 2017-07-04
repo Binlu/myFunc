@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="author" content="lut000"/>
+        <meta name="copyright" content=""/>
+        <meta name="url" content=""/>
+        <meta name="robots" content="all"/>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <base target="_blank"></base>
+        <title>angular</title>
+        <!-- icon -->
+        <link rel="shortcut icon" href="src/images/common/favicon.ico" type="image/x-icon"/>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="src/css/base.css?version=2017/04/18.1"/>
+        
+        <!-- javascript -->
+        <script type="text/javascript" src="src/js/lib/require.js"></script>
+        <script type="text/javascript" src="src/js/lib/angular-1.5.8.min.js?r=1495504617326"></script>
+        <script type="text/javascript" src="src/js/lib/angular-ui-router.min.js?r=1495504617326"></script>
+        
+        <script type="text/javascript" src="src/js/common/main.js"></script>
+        <!-- ie hack -->
+        <!--[if lte IE 8]> 
+            <link rel="stylesheet" type="text/css" href="css/ie-hack.css?version=2017/04/18"/>
+        <![endif]-->
+    </head>
+    <body ng-controller="mainController">
+        <!-- header start -->
+    	<div ng-include="'header.html'"></div>
+        <!-- header end -->
+        <!-- main start -->
+        <div class="content" ui-view>
+			我是内容
+        </div>
+        <!-- main end -->
+        <!-- footer start -->
+    	<div ng-include="'footer.html'"></div>
+        <!-- footer end -->
+        <!--[if lte IE 8]> 
+            <script type="text/javascript" src="js/ie-hack.js?version=2017/04/11"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="src/js/common/angular-set.js"></script>
+        <script type="text/javascript" src="src/js/common/controller.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

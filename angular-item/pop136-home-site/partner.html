@@ -1,0 +1,48 @@
+
+
+<link rel="stylesheet" type="text/css" href="src/css/partner/partner.css?version=2017/07/04"/>
+<!-- ie hack -->
+    <!--[if lte IE 8]>
+       <script type="text/javascript" src="src/js/ie-hack.js"></script>
+       <style type="text/css">
+        .story-section .story-list .hover-on{overflow-y:auto;}
+        .story-section .hover-on>.msg-link{padding: 0px 10% 12px;}
+    </style>
+<![endif]-->
+<div class="top-bg">
+    <div class="top-msg">
+        <div class="section">
+            <p class="top-msg-hd">POP坚持与中国企业和设计师共同成长和成熟！<br />坚信中国的中小企业必将会走向大型企业，由产品必将会变为知名品牌，由中国品牌必将会成为世界名牌！<br />POP（全球）时尚网络机构市场占有率高达80%，拥有2870万数据的资讯库，5个网站的集群，服务70万用户，其中有李宁、恒源祥、报喜鸟、波司登、红蜻蜓、安踏等在内的15000多个国内知名品牌，和18万中国服饰设计师。</p>
+        </div>
+    </div>
+    <img src="src/images/partner/banner1.jpg" alt="bg"/>
+    <!-- nav -->
+    <div class="nav-div">
+        <ul class="section level-two-list js-this-list">
+            <li><a class="{{showModel('list')==true?'cur':''}}" href="layout.html#/partner/list" target="_self" title="客户列表">客户列表</a></li>
+            <li><a class="{{showModel('story')==true?'cur':''}}" href="layout.html#/partner/story" target="_self" title="服务故事">服务故事</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 模块 -->
+<div ui-view></div>
+
+<!-- other -->
+<!-- fixed right -->
+<div class="link-btns js-right-box">
+    <a href="http://www.pop136.com/pop_help.php" class="normal-btn">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="src/images/service/issue.png" alt="问题" />
+            <p>常见问题</p>
+        </div>
+    </a>
+    <a href="javascript:void(0);" class="top-btn js-top-btn" target="_self">
+        <div class="back-box"></div>
+        <div class="msg-contain">
+            <img src="src/images/service/go-top.png" alt="top" />
+        </div>
+    </a>
+</div>
+<loadscript ng-src="src/js/partner/partner.js?version=2017/07/04"></loadscript>
