@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>调色板</title>
+    <style type="text/css">
+        body{text-align: center;}
+        header{padding: 20px;}
+        .color-container{display: inline-block;padding: 20px;background-color: #edc}
+        .touch-canvas{width: 400px;height: 50px;border:1px solid #2d3;}
+        .canvas-ele{width: 400px;height: 400px;border:1px solid #f34;}
+
+        .show-div{position: relative;display: inline-block;height: 50px;overflow: hidden;}
+        .show-div>span{pointer-events:none;position: absolute;z-index: 10;left: 0;top: 0;display: inline-block;width: 10px;height: 10px;border:1px solid #111;border-radius: 50%;box-shadow: 0px 0px 2px 1px #fff}
+        .color-div{position: relative;display: inline-block;}
+        .color-div>span{pointer-events:none;position: absolute;z-index: 10;right: 0;top: 0;display: inline-block;width: 10px;height: 10px;border:1px solid #111;border-radius: 50%;box-shadow: 0px 0px 2px 1px #fff}
+        .val-div{text-align: left;}
+        .val-div>label{display: inline-block;width: 4.5em}
+        .val-div>input{display: inline-block;padding: 0.5em;margin-top: 15px}
+        .val-div>span{display: inline-block;width: 50px;height: 50px;vertical-align: middle;}
+    </style>
+</head>
+<body>
+    <header>调色板</header>
+    <div class="color-container">
+        <div class="show-div js-show-div">
+            <canvas class="touch-canvas"></canvas>
+            <span></span>
+        </div><br/>
+        <div class="color-div js-color-div">
+            <canvas class="canvas-ele"></canvas>
+            <span></span>
+        </div>
+        <div class="val-div js-val-div">
+            <label>rgb:</label><input readonly class="js-color-val" type="text"><br>
+            <label>#:</label><input readonly class="js-color-val" type="text"><br>
+            <label>当前选择:</label><span></span>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        (function(g){
+            var def={
+                ow:400,
+                oh:400,
+                tw:400,
+                th:50,
+                x:399,
+                y:0
+            };
+            //获取对象
+            var show_div=document.querySelector(".js-show-div");
+            var color_div=document.querySelector(".js-color-div");
+            var canvas_ele=color_div.querySelector("canvas");
+            var touch_canvas=show_div.querySelector("canvas");
+
+            var spa1=show_div.querySelector("span");
+            var spa2=color_div.querySelector("span");
+            var spa3=document.querySelector(".js-val-div>span");
+            var area=document.querySelectorAll(".js-color-val");
+
+            var spnw=parseInt(getComputedStyle(spa1,false)["width"]);
+
+            //初始化
+            canvas_ele.width=def.ow;
+            canvas_ele.height=def.oh;
+            touch_canvas.width=def.tw;
+            touch_canvas.height=def.th;
+
+            var ctx=canvas_ele.getContext("2d");
+            var ctx2=touch_canvas.getContext("2d");
+
+            //生成色带
+            var tw=def.tw;
+            while(--tw>=-1){
+                ctx2.beginPath();
+                ctx2.strokeStyle="hsl("+tw+",100%,50%)";
+                ctx2.moveTo(tw,0);
+                ctx2.lineTo(tw,def.th);
+                ctx2.stroke();
+                ctx2.closePath();
+            }
+
+            var canvas_data=ctx2.getImageData(0,0,1,1);
+            setCanvasData(canvas_data.data);
+            //设置色板
+            function setCanvasData(data){
+                var ow=def.ow,
+                    oh=def.oh,
+                    r=data[0],
+                    gg=data[1],
+                    b=data[2],
+                    a=data[3],
+                    img_data=ctx.getImageData(0,0,ow,oh),
+                    px_data=img_data.data,
+                    k=0,
+                    v=0
+                ;
+                //循环高度
+                for(var i=0;i<oh;i++){
+
+                    k=(oh-i)/oh;
+
+                    v=255*k;
+                    for(var j=0;j<ow*4;j+=4){
+                        px_data[i*ow*4+j]=v-(v-r*k)*j/ow/4|0;
+                        px_data[i*ow*4+j+1]=v-(v-gg*k)*j/ow/4|0;
+                        px_data[i*ow*4+j+2]=v-(v-b*k)*j/ow/4|0;
+                        px_data[i*ow*4+j+3]=255;
+                    }
+                }
+                ctx.putImageData(img_data,0,0);
+                setColor();
+            };
+
+
+            //点击选择色区
+            touch_canvas.addEventListener("click",function(e){
+                var x=e.offsetX<0?0:e.offsetX;
+                var y=e.offsetY<0?0:e.offsetY;
+                var ndata=ctx2.getImageData(x,y,1,1);
+                setCanvasData(ndata.data);
+                spa1.style.top=e.offsetY-spnw/2+"px";
+                spa1.style.left=e.offsetX-spnw/2+"px";
+                e.preventDefault;
+                e.stopPropagation();
+            },false);
+
+            //选择色值
+            canvas_ele.addEventListener("click",function(e){
+                var x=e.offsetX<0?0:e.offsetX;
+                var y=e.offsetY<0?0:e.offsetY;
+                
+                spa2.style.top=e.offsetY-spnw/2+"px";
+                spa2.style.left=e.offsetX-spnw/2+"px";
+                def.x=x;
+                def.y=y;
+                setColor();
+                e.preventDefault;
+                e.stopPropagation();
+            },false);
+
+            function setColor(){
+                var nimg_data=ctx.getImageData(def.x,def.y,1,1);
+                var r=nimg_data.data[0];
+                var g=nimg_data.data[1];
+                var b=nimg_data.data[2];
+                var a=nimg_data.data[3];
+                var ff=toFF(r)+toFF(g)+toFF(b);
+                area[0].value=r+","+g+","+b;
+                area[1].value=ff;
+
+                spa3.style.backgroundColor="#"+ff;
+            };
+
+            function toFF(num){
+                return num>16?num.toString(16).toUpperCase():"0"+num.toString(16).toUpperCase();
+            };
+
+        })(window);
+    </script>
+</body>
+</html>
