@@ -1,0 +1,55 @@
+<div class="detail-section news-section">
+    <!--媒体报导-->
+    <div class="media-section section">
+        <div class="title-contain">
+            <div class="title-box">
+                <strong>媒体报道</strong>
+            </div>
+        </div>
+        <div class="news-list clear">
+            <a ng-repeat="item in news_list.media | limitTo:3" class="{{$index==1?'list-center':''}}" href="index.html#/view/news_detail?id={{item.id}}&type=1" title="{{item.title}}">
+                <img ng-src="{{item.img_src}}" alt="企业愿景"/>
+                <p>{{item.title}}</p>
+                <div class="enterprise-msg clear">
+                    <p>{{item.title}}</p>
+                    <span>{{item.date}}</span>
+                </div>
+            </a>
+        </div>
+        <div class="common-active clear">
+            <a ng-repeat="item in news_list.media | limitTo:8:3" class="clear" href="layout.html#/view/news_detail?id={{item.id}}&type=1" title="{{item.title}}" ><span>{{item.date}}</span>· &nbsp;{{item.title}}</a>
+        </div>
+        <div class="more-btn-contain">
+            <a class="more-btn js-more-active" href="layout.html#/view/news_list?type=1" title="媒体新闻" >更多</a>
+        </div>
+    </div>
+    <!--公司新闻-->
+    <div class="company-news section clear">
+        <div class="title-contain">
+            <div class="title-box">
+                <strong>公司新闻</strong>
+            </div>
+        </div>
+        <div class="scene-section ">
+
+            <div class="scene-list">
+                <div class="common-active clear">
+                    <a ng-repeat="item in news_list.company | limitTo:10:1" class="clear" href="layout.html#/view/news_detail?id={{item.id}}&type=2" title="{{item.title}}" ><span>{{item.date}}</span>· &nbsp;{{item.title}}</a>
+                </div>
+                <div class="more-btn-contain">
+                    <a class="more-btn js-more-active" href="layout.html#/view/news_list?type=2" title="公司新闻">更多</a>
+                </div>
+            </div>
+            <div class="scene-msg">
+                <a href="layout.html#/news-detail?id={{news_list.company[0].id}}" title="{{news_list.company[0].title}}">
+                    <img src="src/images/about/picture-scene.png"/>
+                    <div class="scene-disc clear">
+                        <p>{{news_list.company[0].title}}</p>
+                        <span>{{news_list.company[0].date}}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

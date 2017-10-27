@@ -1,0 +1,3 @@
+define(function(){
+	return [{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h9\/d1.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h9\/x1.jpg","title":"\u516c\u53f8\u9886\u5bfc\u4e0e\u56e2\u59d4\u9886\u5bfc\u5408\u5f71"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h9\/d2.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h9\/x2.jpg","title":"\u56e2\u59d4\u9886\u5bfc\u9976\u6709\u5174\u81f4\u53c2\u89c2\u5458\u5de5\u5de5\u4f5c"},{"big":"http:\/\/img1.p.pop-fashion.com\/photo\/h9\/d3.jpg","small":"http:\/\/img1.p.pop-fashion.com\/photo\/h9\/x3.jpg","title":"\u516c\u53f8\u9886\u5bfc\u4e0e\u56e2\u59d4\u9886\u5bfc\u5408\u5f71"}]
+});

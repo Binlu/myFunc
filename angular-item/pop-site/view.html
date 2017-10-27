@@ -1,0 +1,50 @@
+<style>
+	.view-section{padding: 0 0 60px;}
+	/*小导航*/
+	.nav-links{line-height: 22px; font-size: 16px;padding:50px 0 30px;}
+	.nav-links>div{display:inline-block}
+	.nav-links a{color: #333333;}
+	.nav-links img{width: 8px;vertical-align: middle;}
+	.nav-links .current-link{color: #FB3352;}
+	.nav-links a:hover{color: #FB3352;}
+</style>
+<!-- view -->
+<section class="section">
+	<div class="nav-links">
+		<div ng-repeat="item in pos_arr | limitTo:pos_arr.length-1">
+			<a href="{{item.href}}" title="{{item.txt}}" target="_self">{{item.txt}}</a>
+			<img src="src/images/about/nav-btn.png" alt="icon"/>
+		</div>
+	    
+	    <!-- <a href="/aboutpop.php?sn=6" title="企业相册" target="_self">企业相册</a>
+	    <img src="src/images/about/nav-btn.png" alt="icon"/>-->
+	    <span class="current-link">{{pos_arr[pos_arr.length-1].txt}}</span>
+	</div>
+</section>
+<div class="section view-section" ui-view></div>
+<!-- other -->
+<!-- fixed right -->
+<posdom></posdom>
+<loadscript ng-type="2" ng-str='require(["jquery"],function(jquery){
+    	$(function(){
+	        //返回顶部按钮
+	        var right_box_ele=$(".js-right-box");
+	        $(".js-top-btn").on("click",function(e){
+	            $("html,body").animate({"scrollTop":0},500);
+	        });
+	        // 滚动监听
+	        setRightFunc($(window).scrollTop());
+	        $(window).on("scroll",function(){
+	            var nscroll_y=$(this).scrollTop();
+	            setRightFunc(nscroll_y);
+	        });
+	        function setRightFunc(y){
+	            if(y>0){
+	                right_box_ele.show();
+	            }else{
+	                right_box_ele.hide();
+	            }
+	        };
+	    });
+	});'>
+</loadscript>

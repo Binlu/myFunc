@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="src/css/about/about.css?version={{s_version}}"/>
+<!-- view -->
+<div class="top-bg">
+    <img src="src/images/about/banner1.jpg" alt="bg"/>
+    <!-- nav -->
+    <div class="nav-div">
+        <ul class="section level-two-list">
+            <li><a ui-sref="about.1" ui-sref-active="cur" href="index.html#/about/1" target="_self" title="POP简介">POP简介</a></li>
+            <li><a ui-sref="about.2" ui-sref-active="cur" href="index.html#/about/2" target="_self" title="企业文化">企业文化</a></li>
+            <li><a ui-sref="about.3" ui-sref-active="cur" href="index.html#/about/3" target="_self" title="企业荣誉">企业荣誉</a></li>
+            <li><a ui-sref="about.4" ui-sref-active="cur" href="index.html#/about/4" target="_self" title="新闻报道">新闻报道</a></li>
+            <li><a ui-sref="about.5" ui-sref-active="cur" href="index.html#/about/5" target="_self" title="发展历程">发展历程</a></li>
+            <li><a ui-sref="about.6" ui-sref-active="cur" href="index.html#/about/6" target="_self" title="企业相册">企业相册</a></li>
+            <li><a ui-sref="about.7" ui-sref-active="cur" href="index.html#/about/7" target="_self" title="招贤纳士">招贤纳士</a></li>
+        </ul>
+    </div>
+</div>
+<div ui-view>
+    
+</div>
+<!-- other -->
+<!-- fixed right -->
+<posdom></posdom>
+<loadscript ng-type="2" ng-str='require(["jquery"],function(jquery){
+    	$(function(){
+	        //返回顶部按钮
+	        var right_box_ele=$(".js-right-box");
+	        $(".js-top-btn").on("click",function(e){
+	            $("html,body").animate({"scrollTop":0},500);
+	        });
+	        // 滚动监听
+	        setRightFunc($(window).scrollTop());
+	        $(window).on("scroll",function(){
+	            var nscroll_y=$(this).scrollTop();
+	            setRightFunc(nscroll_y);
+	        });
+	        function setRightFunc(y){
+	            if(y>0){
+	                right_box_ele.show();
+	            }else{
+	                right_box_ele.hide();
+	            }
+	        };
+	    });
+	});'>
+</loadscript>

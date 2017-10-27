@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="src/css/contact/contact.css?version={{s_version}}"/>
+<div class="top-bg">
+    <img src="src/images/contact/banner1.jpg" alt="bg"/>
+    <div class="info-div">
+        <div class="section">
+            <h2>POP服务您每一天<br/>任何问题可拨打免费电话</h2>
+            <h3><img src="src/images/contact/icon4.png" alt="tel"/>4008  210  662</h3>
+            <p>关注小秘书微信，专项一对一贴心服务</p>
+            <span><img src="src/images/contact/code1.jpg" alt="code"/>女装小秘书</span>
+            <span><img src="src/images/contact/code2.jpg" alt="code"/>男装小秘书</span>
+            <span><img src="src/images/contact/code3.jpg" alt="code"/>童装小秘书</span>
+            <span><img src="src/images/contact/code4.jpg" alt="code"/>全品类小秘书</span>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="nav-div">
+        <ul class="section level-two-list js-level-two-list">
+            <li><a ui-sref-active="cur" ui-sref="contact.site" href="index.html#/contact/site" target="_self" title="服务网点">服务网点</a></li>
+            <li><a ui-sref-active="cur" ui-sref="contact.cooperation" href="index.html#/contact/cooperation" target="_self" title="商务合作">商务合作</a></li>
+            <li><a ui-sref-active="cur" ui-sref="contact.advertisement" href="index.html#/contact/advertisement" target="_self" title="广告中心">广告中心</a></li>
+        </ul>
+    </div>
+</div>
+<!-- view -->
+<div ui-view>
+    
+</div>
+<!-- other -->
+<!-- fixed right -->
+<posdom></posdom>
+<loadscript ng-type="2" ng-str='require(["jquery"],function(jquery){
+    	$(function(){
+	        //返回顶部按钮
+	        var right_box_ele=$(".js-right-box");
+	        $(".js-top-btn").on("click",function(e){
+	            $("html,body").animate({"scrollTop":0},500);
+	        });
+	        // 滚动监听
+	        setRightFunc($(window).scrollTop());
+	        $(window).on("scroll",function(){
+	            var nscroll_y=$(this).scrollTop();
+	            setRightFunc(nscroll_y);
+	        });
+	        function setRightFunc(y){
+	            if(y>0){
+	                right_box_ele.show();
+	            }else{
+	                right_box_ele.hide();
+	            }
+	        };
+	    });
+	});'>
+</loadscript>

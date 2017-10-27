@@ -1,0 +1,19 @@
+<div class="detail-section company-photos">
+    <div class="section">
+        <ul class="photos-list clear js-photos-list">
+            <li ng-repeat="item in photos_arr track by $index" style="{{($index+1)%4==0?'margin-right:0':''}}">
+                <a href="index.html#/view/photo_detail?act=photo{{photos_len-start_num-$index}}" title="查看详情">
+                    <div>
+                        <img class="photo-ele" ng-src="src/images/photo/h{{photos_len-start_num-$index}}/x1.{{[5,8,13,17,16,26].indexOf(photos_len-start_num-$index)!=-1?'JPG':'jpg'}}?t={{ntimes}}" alt="pic">
+                        <img src="src/images/about/icon2.png" alt="icon">
+                    </div>
+                    <h3>{{item}}</h3>
+                </a>
+            </li>
+        </ul>
+        <!-- 分页 -->
+        <div class="page-controller js-page-controller">
+        	
+        </div>
+    </div>
+</div>

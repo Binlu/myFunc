@@ -1,0 +1,62 @@
+/*
+	#author		lut000
+	#date 		2017/10/20
+	#purpose	主入口
+*/
+require.config({
+    baseUrl:"src/js",
+    urlArgs:"r="+(new Date()).getTime(),
+    paths:{
+        "jquery":["lib/jquery-1.11.3.min"],
+        "general":["common/general-1.0"],
+        "msg":["common/pop-msg-1.0"],
+        "angular":["lib/angular-1.5.8.min"],
+        "ui-router":["lib/angular-ui-router.min"],
+        "app":["controllers/app"],
+        "router":["routes/router"],
+        "directives":["directive/directives"],
+        "services":["services/services"],
+        "laypage":["lib/laypage"],
+        "main-controller":"controllers/main-controller"
+    },
+    shim:{
+    	"laypage":{
+            exports:"laypage"
+        },
+        "general":{
+            deps:["jquery"],
+            exports:"pop"
+        },
+        "msg":{
+            deps:["jquery"],
+            exports:"msg"
+        },
+        "angular":{
+        	exports:"angular"
+        },
+        "ui-router":{
+        	deps:["angular"],
+        },
+        "app":{
+        	deps:["ui-router"]
+        },
+        "router":{
+        	deps:["app","services"]
+        },
+        "directives":{
+        	deps:["app"]
+        },
+        "main-controller":{
+        	deps:["app","general"]
+        },
+        "services":{
+        	deps:["app"]
+        }
+    }
+});
+require(["jquery","angular","router","main-controller","directives","services"],function(jquery,angular){
+    $(function(){
+    	//自动执行angular
+    	angular.bootstrap(document,["mainApp"]);
+    });
+});

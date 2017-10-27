@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="src/css/login/login.css?version={{s_version}}"/>
+<!-- 登录框 -->
+<div class="login-box">
+	<div class="section clear">
+		<div class="login-div">
+			<form class="js-form-ele" name="loginForm" action="loginHandler.php" method="POST" autocomplete="off" target="_self">
+				<!--隐藏域-->
+				<input type="hidden" id="hidRandCode" name="hidRandCode" value="">
+				<input type="hidden" id="hidEncryptCode" name="hidEncryptCode" value="">
+				<!-- 账户 -->
+				<label class="account-label" for="username"><img src="src/images/login/account.png" alt="icon"></label>
+				<input class="input-area js-input-area" name="account" type="text" id="username" placeholder="请输入用户名" maxlength="40" autocomplete="off">
+				<p class="error-p js-error-ele"><img src="src/images/login/icon7.png" alt="icon">请输入正确的用户名</p>
+				<!-- 密码 -->
+				<label class="pass-label" for="password"><img src="src/images/login/password.png" alt="icon"></label>
+				<input class="input-area js-input-area" name="passwd" type="password" id="password" placeholder="请输入密码" maxlength="40">
+				<p class="error-p js-error-ele"><img src="src/images/login/icon7.png" alt="icon">请输入正确的密码</p>
+				<!-- 图片验证码 -->
+				<label class="code-label" for="code"><img src="src/images/login/auth-code.png" alt="icon"></label>
+				<span class="code-span clear">
+					<input class="js-input-area js-code" id="code" name="code" type="text" placeholder="请输入验证码" maxlength="4"/>
+					<img src="/register.php?_a=imagesCode" alt="img-code" onclick="this.src=&quot;/register.php?_a=imagesCode&amp;&quot;+Math.random();"/>
+				</span>
+				<p class="error-p js-error-ele"><img src="src/images/login/icon7.png" alt="icon">请输入正确的验证码</p>
+				<!-- 提交按钮 -->
+				<input type="submit" value="立即登录" class="login-btn js-login-btn">
+				<div class="go-register">
+					<a href="index.html#/register" title="POP用户注册">立即注册</a>
+				</div>
+				<!-- 密码相关 -->
+				<div class="pass-method clear not-selected">
+					<!-- <input id="check-area" class="hide" name="checkbox1" type="checkbox" value="">
+					<label class="js-check-area" for="check-area"><img src="src/images/login/n-check.png" alt="icon">30天内免登陆</label> -->
+					<a href="index.html#/forget-password" title="忘记密码"><img src="src/images/login/icon1.png" alt="icon">忘记密码了吗？</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<loadscript ng-type="1" ng-src="src/js/login/login.js"></loadscript>
+       

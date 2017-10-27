@@ -1,0 +1,51 @@
+<link rel="stylesheet" type="text/css" href="src/css/member/member.css?version=2017/08/09"/>
+
+<div class="top-bg">
+    <img src="src/images/contact/banner1.jpg" alt="bg"/>
+    <!-- nav -->
+    <div class="nav-div">
+        <ul class="section level-two-list">
+            <li><a ui-sref-active="cur" ui-sref="member.notes" href="index.html#/member/notes" target="_self" title="会员须知">会员须知</a></li>
+            <li><a ui-sref-active="cur" ui-sref="member.become" href="index.html#/member/become" target="_self" title="成为会员">成为会员</a></li>
+            <li><a ui-sref-active="cur" ui-sref="member.cost" href="index.html#/member/cost" target="_self" title="收费一览">收费一览</a></li>
+            <li><a ui-sref-active="cur" ui-sref="member.paytype" href="index.html#/member/paytype" target="_self" title="付款方式">付款方式</a></li>
+            <li><a ui-sref-active="cur" ui-sref="member.free_experience" href="index.html#/member/free-experience" target="_self" title="免费体验">免费体验</a></li>
+        </ul>
+    </div>
+</div>
+<!-- view -->
+<div ui-view>
+    
+</div>
+<!-- other -->
+<!-- 查看大图 -->
+<div class="show-pic-box js-show-pic-box">
+    <img class="js-show-pic" src="http://img1.p.pop-fashion.com/photo/h77/d14.jpg?r=1493093373297" alt="浏览大图" style="width: auto; margin-top: 85px; height: 680px;"><br>
+	<button class="show-close js-close-btn" target="_self" title="关闭"><img src="src/images/about/icon3.png" alt="关闭"></button>
+</div>
+<div class="bg-div js-bg"></div>
+<!-- fixed right -->
+<posdom></posdom>
+<loadscript ng-type="2" ng-str='require(["jquery"],function(jquery){
+    	$(function(){
+	        //返回顶部按钮
+	        var right_box_ele=$(".js-right-box");
+	        $(".js-top-btn").on("click",function(e){
+	            $("html,body").animate({"scrollTop":0},500);
+	        });
+	        // 滚动监听
+	        setRightFunc($(window).scrollTop());
+	        $(window).on("scroll",function(){
+	            var nscroll_y=$(this).scrollTop();
+	            setRightFunc(nscroll_y);
+	        });
+	        function setRightFunc(y){
+	            if(y>0){
+	                right_box_ele.show();
+	            }else{
+	                right_box_ele.hide();
+	            }
+	        };
+	    });
+	});'>
+</loadscript>

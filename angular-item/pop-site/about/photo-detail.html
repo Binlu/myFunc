@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="src/css/about/company-photo-detail.css?version={s_version}">
+<div class="photos-detail-box js-photos-detail-box">
+    <ul class="photos-detail-list clear js-photos-detail-list">
+        <li ng-repeat="item in photos_arr" style="{{($index+1)%4==0?'margin-right:0':''}}" ng-click="showBigImg(this)" title="{{item.title}}">
+        	<img ng-src="{{item.small+'?t='+ntimes}}" alt="pic">
+        </li>
+    </ul>
+    <!-- 分页 -->
+    <div class="page-controller js-page-controller"></div>
+</div>
+<!-- 图片展示 -->
+<div class="show-pic-box js-show-pic-box">
+    <img class="js-show-pic" src="{{big_src}}" alt="浏览大图"/><br/>
+    <span class="js-txt"></span>
+    <button class="show-close js-close-btn" title="关闭"><img src="src/images/about/icon3.png" alt="关闭"></button>
+    <button class="show-btn js-prev-btn" ng-click="toImgShow(this,1)" title="上一张"><img src="src/images/about/prev.png" alt="上一张"></button>
+    <button class="show-btn show-right-btn js-next-btn" ng-click="toImgShow(this,2)" title="下一张"><img src="src/images/about/next.png" alt="下一张"></button>
+</div>
+<div class="bg-div js-bg"></div>
