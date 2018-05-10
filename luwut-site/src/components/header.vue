@@ -1,5 +1,5 @@
 <template>
-	<header class="page-header">
+	<header class="page-header" ref="abc">
 		<section class="container">
 			<div class="navbar navbar-default">
 				<ul class="nav nav-pills col-md-4">
@@ -35,7 +35,7 @@
 	}
 </script>
 
-<style scoped src="../../static/css/common/base.css">
+<style src="../../static/css/common/base.css">
 </style>
-<style scoped src="../../static/css/common/main.css">
+<style src="../../static/css/common/main.css">
 </style>

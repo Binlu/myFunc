@@ -4,7 +4,11 @@ import routes from '@/router/routes';
 import header from '@/components/header';
 import footer from '@/components/footer';
 import 'bootstrap/dist/js/bootstrap.min'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// 共用
+import common from '@/assets/js/common/common';
+
 Vue.config.productionTip = false;
 
 new Vue({
@@ -12,6 +16,9 @@ new Vue({
 	router:routes,
 	data(){
 		return {
+			content_style:{
+				height:'400px'
+			},
 			is_loaded:true
 		}
 	},
@@ -19,8 +26,9 @@ new Vue({
 		'header-template':header,
 		'footer-template':footer
 	},
-	created : function(){
-		this.is_loaded = false
-		console.log(' It work! ')
-	}
+	mounted: function () {
+		this.is_loaded = false;
+	  	this.init();
+	},
+	methods: common
 })

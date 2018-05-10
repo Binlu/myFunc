@@ -1,7 +1,8 @@
 <template>
 	<footer class="page-footer">
 		<div class="container">
-			我是底部
+			<p>Copyright© 2016-2018 陆吾特论坛</p>
+			<p><a href="http://www.miitbeian.gov.cn/" title="备案相关">陇ICP备17004172号</a></p>
 		</div>
 	</footer>
 </template>

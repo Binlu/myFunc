@@ -2,4 +2,20 @@
 
 
 /*header*/
+header{background-color: #fde}
 .nav>li>a{display: block;padding: 10px 20px;}
+
+
+
+
+
+/*main-section*/
+.main-section{}
+
+
+
+
+/*footer*/
+footer{padding: 20px;background-color: #000;color: #fff}
+
+footer a{color: #fff;}
