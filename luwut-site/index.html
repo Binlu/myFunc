@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>vue-router</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="lut">
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			li{list-style: none;}
+			.nav>ul>li{display: inline-block;}
+			.nav>ul>li>a{display: block;padding: 5px 12px;}
+			.nav>ul>li>a:hover{color: #fff;background-color: #ad5}
+			.main-section{padding: 20px;}
+		</style>
+	</head>
+	<body>
+		<div class="js-app-box view">
+			<div v-if="is_loaded">loading</div>
+			<header-template></header-template>
+			<section class="main-section">
+				<router-view></router-view>
+			</section>
+			<footer-template></footer-template>
+		</div>
+	</body>
+</html>
