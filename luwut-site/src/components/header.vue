@@ -35,7 +35,9 @@
 	}
 </script>
 
-<style src="../../static/css/common/base.css">
+<style lang="less">
+	@import "../../static/less/common/base.less";
 </style>
-<style src="../../static/css/common/main.css">
+<style lang="less">
+	@import "../../static/less/common/main.less";
 </style>

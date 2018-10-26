@@ -10,11 +10,26 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/api': {  
+            target: 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp',  
+            changeOrigin: true,  
+            pathRewrite: {  
+                '^/api': ''  
+            }  
+        },
+        '/fcg': {  
+            target: 'https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg',  
+            changeOrigin: true,  
+            pathRewrite: {  
+                '^/fcg': ''  
+            }  
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8085, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -51,7 +66,22 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
-
+    proxyTable: {
+        '/api': {  
+            target: 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp',  
+            changeOrigin: true,  
+            pathRewrite: {  
+                '^/api': ''  
+            }  
+        },
+        '/fcg': {  
+            target: 'https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg',  
+            changeOrigin: true,  
+            pathRewrite: {  
+                '^/fcg': ''  
+            }  
+        }
+    },
     /**
      * Source Maps
      */

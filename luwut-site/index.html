@@ -10,7 +10,8 @@
 			<div v-if="is_loaded">loading</div>
 			<header-template></header-template>
 			<section class="main-section js-main-section" v-bind:style="content_style">
-				<router-view></router-view>
+                <p>当前位置--{{$route.name}}</p>
+				<router-view class="abcd"></router-view>
 			</section>
 			<footer-template></footer-template>
 		</div>

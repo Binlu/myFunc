@@ -3,16 +3,18 @@ import Vue from 'vue';
 import routes from '@/router/routes';
 import header from '@/components/header';
 import footer from '@/components/footer';
-import 'bootstrap/dist/js/bootstrap.min'
+import 'bootstrap/dist/js/bootstrap.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 共用
 import common from '@/assets/js/common/common';
 
+
 Vue.config.productionTip = false;
 
 new Vue({
-	el: '.js-app-box',
+    el: '.js-app-box',
+    
 	router:routes,
 	data(){
 		return {
@@ -30,5 +32,5 @@ new Vue({
 		this.is_loaded = false;
 	  	this.init();
 	},
-	methods: common
+	methods:common
 })
