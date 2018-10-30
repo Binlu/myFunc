@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>m</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="lut">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style type="text/css">
+            
+        </style>
+    </head>
+    <body>
+        <input type="text" class="js-search">
+        <ul class="js-list"></ul>
+        <script type="text/javascript">
+            window.onload=function(){
+                var o_list=document.querySelector(".js-list");
+                var o_search=document.querySelector(".js-search");
+                var str="E.戴维斯,马库斯.莫里斯,J.理查德森,巴丁格,A.里弗斯,艾克萨姆,奥特洛,A-安德森,S.诺瓦克,阿隆佐.吉,尤德里,阿米奴,E.沃特森,香波特,亨森,弗莱,法玛尔,莫罗,亨弗里斯,A.布鲁克斯,奥古斯汀,CJ.沃特森,吉尔克里斯特,J.华莱士,安蒂奇,T.道格拉斯,邦纳,P.帕特森,B.拉什,J.琼斯,M.布鲁克斯,PJ.塔克,诺埃尔,巴里亚,T.埃文斯,弗耶,R.埃文斯,布莱切,坎特,I.史密斯,庞德塞特,D.哈里斯,T.罗宾逊,普里吉奥尼,尤度,哈克莱斯,杜德里,N.科里森,D.布莱尔,邓利维,布雷布科,科普兰德,C.泽勒,B.巴斯,萨尔蒙斯,C.安德森,A.拜纳姆,A.约翰逊,利文斯顿,B.海伍德";
+                
+                var data=str.split(",");
+                o_search.oninput=o_search.onpropetychange=function(){
+                    var txt=this.value;
+                    if(txt!=""){
+                        searchFunc(txt);
+                    }
+                }
+                function searchFunc(txt){
+                    var result_arr=[];
+                    for(var i=0,len=data.length;i<len;i++){
+                        if(data[i].indexOf(txt)!=-1){
+                            result_arr.push(data[i]);
+                        }
+                    };
+                    setDom(result_arr);
+                };
+                function setDom(arr) {
+                    var _html="";
+                    for(var i=0,len=arr.length;i<len;i++){
+                        _html+='<li>'+arr[i]+'</li>'
+                    };
+                    o_list.innerHTML=_html;
+                }
+                
+            }
+        </script>
+    </body>
+</html>
